@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/drivers.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"38af352e8c7bf957a1c94e013d018e5e"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f10c94d8-f727-47eb-b6c7-ddec845f8823
+      X-Runtime:
+      - '0.110000'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"driver_id":6928,"first_name":"Ward","last_name":"White"},{"driver_id":2712,"first_name":"Delores","last_name":"Feeney"},{"driver_id":1084,"first_name":"Anthony","last_name":"Stoltenberg"},{"driver_id":4862,"first_name":"Alberta","last_name":"Prohaska"},{"driver_id":6104,"first_name":"Cecile","last_name":"Rice"},{"driver_id":3674,"first_name":"Nyasia","last_name":"Hane"},{"driver_id":5050,"first_name":"Tiffany","last_name":"Kuvalis"},{"driver_id":2145,"first_name":"Berta","last_name":"Kunde"},{"driver_id":5578,"first_name":"Jesse","last_name":"McGlynn"},{"driver_id":495,"first_name":"Louvenia","last_name":"Kertzmann"},{"driver_id":4176,"first_name":"Harry","last_name":"Senger"}]'
+    http_version: 
+  recorded_at: Tue, 30 Dec 2014 21:57:16 GMT
+recorded_with: VCR 2.9.3
