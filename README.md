@@ -7,23 +7,12 @@ Gem hooks into the Grossman API.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'gman_client'
+gem 'gman_client', ':github => git@github.com:michaelachrisco/gman_client.git'
 ```
 
 And then execute:
 
     $ bundle
-
-Or install it yourself as:
-
-    $ gem install gman_client
-
-## Usage
-
-```Ruby
-irb
-
-
 
 ## Contributing
 
