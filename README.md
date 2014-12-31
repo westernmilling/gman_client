@@ -7,7 +7,7 @@ Gem hooks into the Grossman API.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'gman_client', ':github => git@github.com:michaelachrisco/gman_client.git'
+gem 'gman_client', :git => 'git@github.com:michaelachrisco/gman_client.git'
 ```
 
 And then execute:
