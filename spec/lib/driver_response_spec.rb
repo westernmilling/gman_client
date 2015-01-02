@@ -15,6 +15,13 @@ RSpec.describe GmanClient do
       it 'empty is not false' do
         expect(driver_response.empty?).to be_falsey
       end
+
+      it 'responds with a hash list' do
+        is_expected.to satisfy {
+                           |h| h.is_a?(Array) && h.all? { |e| e.is_a?(Hash) }
+                       }
+      end
+      
       describe 'first driver' do
         subject { driver_response.first }
 
