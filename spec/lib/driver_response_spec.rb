@@ -8,7 +8,7 @@ require 'support/vcr'
 RSpec.describe GmanClient do
   describe '.receive_drivers' do
     VCR.use_cassette('drivers') do
-      response = GmanClient.receive_drivers
+      response = GmanClient.drivers
       subject(:driver_response) { response }
       let(:driver) { driver_response.first }
 
