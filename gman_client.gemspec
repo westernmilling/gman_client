@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ['MichaelAChrisco']
   spec.email         = ['michaelachrisco@gmail.com']
   spec.summary       = 'GMAN gem client'
-  spec.description   = 'GMAN gem client'
-  spec.homepage      = ''
+  spec.description   = 'GMAN gem client for Grossman API'
+  spec.homepage      = 'https://github.com/michaelachrisco/gman_client'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0")

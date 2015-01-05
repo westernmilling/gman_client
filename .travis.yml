@@ -1,0 +1,13 @@
+language: jruby
+rvm:
+  - 1.7.16.1
+#script:
+#  - bundle exec rake db:schema:load
+#  - bundle exec rspec -fd
+#before_script:
+#  - cp config/database.travis.yml config/database.yml
+#  - cp config/application.travis.yml config/application.yml
+#  - mysql -e 'create database payroll_app_test;'
+#branches:
+#  only:
+#    - master
