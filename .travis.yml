@@ -1,5 +1,5 @@
 language: jruby
 rvm:
   - 1.7.16.1
-  script:
-    - bundle exec rspec -fd
+script:
+  - bundle exec rspec -fd
