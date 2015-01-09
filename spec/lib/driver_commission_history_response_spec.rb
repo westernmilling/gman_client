@@ -6,14 +6,14 @@ require 'webmock'
 require 'support/vcr'
 
 RSpec.describe GmanClient do
-  describe '.receive_driver_commission_history_response' do
-    VCR.use_cassette('driver_commission_history') do
+  describe '.driver_commission_histories' do
+    VCR.use_cassette('driver_commission_histories') do
       response = GmanClient.driver_commission_histories
-      subject(:driver_response) { response }
-      let(:driver_commission) { driver_response.first }
+      subject(:client_response) { response }
+      let(:driver_commission) { client_response.first }
 
       it 'empty is not false' do
-        expect(driver_response.empty?).to be_falsey
+        expect(client_response.empty?).to be_falsey
       end
 
       it 'responds with a hash list' do
@@ -23,7 +23,7 @@ RSpec.describe GmanClient do
       end
 
       describe 'first driver' do
-        subject { driver_response.first }
+        subject { client_response.first }
 
         it { is_expected.to have_key(:driver_id) }
         it { is_expected.to have_key(:backhauls) }
@@ -45,15 +45,15 @@ RSpec.describe GmanClient do
       end
     end
   end
-  describe '.receive_driver_commission_history_response_by_paid_date' do
-    VCR.use_cassette('driver_commission_history_by_paid_date') do
-      response = GmanClient.driver_commission_histories_by_paid_date(Date.new(2012,01,01))
-      subject(:driver_response) { response }
-      let(:driver_commission) { driver_response.first }
+  describe '.driver_commission_histories_by_paid_date' do
+    VCR.use_cassette('driver_commission_histories_by_paid_date') do
+      response = GmanClient.driver_commission_histories_by_paid_date(
+          Date.new(2012, 01, 01))
+      subject(:client_response) { response }
+      let(:driver_commission) { client_response.first }
 
-      it 'empty is not false' do
-        expect(driver_response.empty?).to be_falsey
-      end
+      it { expect(client_response.empty?).to be_falsey }
+
       it 'responds with a hash list' do
         is_expected.to satisfy {
                            |h| h.is_a?(Array) && h.all? { |e| e.is_a?(Hash) }
@@ -61,7 +61,7 @@ RSpec.describe GmanClient do
       end
 
       describe 'first driver' do
-        subject { driver_response.first }
+        subject { client_response.first }
 
         it { is_expected.to have_key(:driver_id) }
         it { is_expected.to have_key(:backhauls) }
@@ -80,7 +80,7 @@ RSpec.describe GmanClient do
         it { is_expected.to have_key(:revenue) }
         it { is_expected.to have_key(:split_rate) }
         it { is_expected.to have_key(:total_freight_revenue) }
-        it { is_expected.to have_value(Date.new(2012,01,01).to_s)}
+        it { is_expected.to have_value(Date.new(2012, 01, 01).to_s) }
       end
     end
   end

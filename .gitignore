@@ -7,11 +7,10 @@
 /pkg/
 /spec/reports/
 /tmp/
+.idea
+
 *.bundle
 *.so
 *.o
 *.a
 mkmf.log
-
-spec/vcr_cassettes/drivers.yml
-.idea
