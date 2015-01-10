@@ -1,15 +1,15 @@
 language: ruby
 rvm:
 rvm:
-  - 1.9.3
-  - 2.0.0
-  - 2.1.5
+  - "2.1.5"
   - jruby-19mode
   - ruby-head
-  - jruby-1.7.16.1
 script:
   - export WRAP_URL='http://localhost:3000'
   - export CLIENT_ID='f444a467ddbbaed52297d61a3edc5efd93e9292fc542058786aa13fa366865a3'
   - export CLIENT_SECRET='d137a94543da86e52214d3ed86b015f9299ad2fc66681637600afad814cd7d2b'
   - export TOKEN_URL='http://localhost:3000/oauth/token'
   - bundle exec rspec -fd
+matrix:
+ allow_failures:
+   - rvm: ruby-head

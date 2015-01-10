@@ -6,7 +6,7 @@ require 'gman_client/version'
 Gem::Specification.new do |spec|
   spec.name          = 'gman_client'
   spec.version       = GmanClient::VERSION
-  spec.authors       = ['MichaelAChrisco']
+  spec.authors       = ['MichaelAChrisco', 'josephbridgwaterrowe']
   spec.email         = ['michaelachrisco@gmail.com']
   spec.summary       = 'GMAN gem client'
   spec.description   = 'GMAN gem client for Grossman API'

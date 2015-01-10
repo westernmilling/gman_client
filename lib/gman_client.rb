@@ -42,6 +42,8 @@ module GmanClient
   end
 end
 
+private
+
 def retrieve_token
   client_id =
       ENV['CLIENT_ID']

@@ -12,7 +12,7 @@ RSpec.describe GmanClient do
       subject(:client_response) { response }
       let(:driver) { client_response.first }
 
-      it 'empty is not false' do
+      it 'client response will not be empty' do
         expect(client_response.empty?).to be_falsey
       end
 

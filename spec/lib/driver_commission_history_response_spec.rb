@@ -12,7 +12,7 @@ RSpec.describe GmanClient do
       subject(:client_response) { response }
       let(:driver_commission) { client_response.first }
 
-      it 'empty is not false' do
+      it 'client response will not be empty' do
         expect(client_response.empty?).to be_falsey
       end
 
@@ -51,8 +51,9 @@ RSpec.describe GmanClient do
           Date.new(2012, 01, 01))
       subject(:client_response) { response }
       let(:driver_commission) { client_response.first }
-
-      it { expect(client_response.empty?).to be_falsey }
+      it 'client response will not be empty' do
+        expect(client_response.empty?).to be_falsey
+      end
 
       it 'responds with a hash list' do
         is_expected.to satisfy {
