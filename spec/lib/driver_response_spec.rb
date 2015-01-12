@@ -9,11 +9,11 @@ RSpec.describe GmanClient do
   describe '.receive_drivers' do
     VCR.use_cassette('drivers') do
       response = GmanClient.drivers
-      subject(:driver_response) { response }
-      let(:driver) { driver_response.first }
+      subject(:client_response) { response }
+      let(:driver) { client_response.first }
 
-      it 'empty is not false' do
-        expect(driver_response.empty?).to be_falsey
+      it 'client response will not be empty' do
+        expect(client_response.empty?).to be_falsey
       end
 
       it 'responds with a hash list' do
@@ -21,9 +21,9 @@ RSpec.describe GmanClient do
                            |h| h.is_a?(Array) && h.all? { |e| e.is_a?(Hash) }
                        }
       end
-      
+
       describe 'first driver' do
-        subject { driver_response.first }
+        subject { client_response.first }
 
         it { is_expected.to have_key(:driver_id) }
         it { is_expected.to have_key(:first_name) }
