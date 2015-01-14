@@ -1,3 +1,4 @@
+[![Code Climate](https://codeclimate.com/github/michaelachrisco/gman_client/badges/gpa.svg)](https://codeclimate.com/github/michaelachrisco/gman_client) [![Test Coverage](https://codeclimate.com/github/michaelachrisco/gman_client/badges/coverage.svg)](https://codeclimate.com/github/michaelachrisco/gman_client)
 # GmanClient
 
 Gem hooks into the Grossman API.
