@@ -1,18 +1,61 @@
 ---
 http_interactions:
 - request:
+    method: post
+    uri: http://localhost:3000/oauth/token
+    body:
+      encoding: US-ASCII
+      string: grant_type=client_credentials&client_id=f444a467ddbbaed52297d61a3edc5efd93e9292fc542058786aa13fa366865a3&client_secret=d137a94543da86e52214d3ed86b015f9299ad2fc66681637600afad814cd7d2b
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '183'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - no-store
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"640affc4d26b80c0e4dc44416bb3e589"'
+      X-Request-Id:
+      - a325b476-5a96-409d-9349-c2e89e618b07
+      X-Runtime:
+      - '0.024000'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"efdf8ff7a7df653c6c379e0e3cb74d8214040826b8578ab8759f21cdbd2da75d","token_type":"bearer","expires_in":7200,"created_at":1420846215}'
+    http_version: 
+  recorded_at: Fri, 09 Jan 2015 23:30:15 GMT
+- request:
     method: get
     uri: http://localhost:3000/api/v1/drivers.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
+      Authorization:
+      - Bearer efdf8ff7a7df653c6c379e0e3cb74d8214040826b8578ab8759f21cdbd2da75d
   response:
     status:
       code: 200
@@ -27,18 +70,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - '"38af352e8c7bf957a1c94e013d018e5e"'
+      - '"a1e9f0a0d177f5326958b695fbdb4efe"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f10c94d8-f727-47eb-b6c7-ddec845f8823
+      - 03db7fda-a1a0-493c-9263-010c812d41f7
       X-Runtime:
-      - '0.110000'
+      - '0.014000'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '[{"driver_id":6928,"first_name":"Ward","last_name":"White"},{"driver_id":2712,"first_name":"Delores","last_name":"Feeney"},{"driver_id":1084,"first_name":"Anthony","last_name":"Stoltenberg"},{"driver_id":4862,"first_name":"Alberta","last_name":"Prohaska"},{"driver_id":6104,"first_name":"Cecile","last_name":"Rice"},{"driver_id":3674,"first_name":"Nyasia","last_name":"Hane"},{"driver_id":5050,"first_name":"Tiffany","last_name":"Kuvalis"},{"driver_id":2145,"first_name":"Berta","last_name":"Kunde"},{"driver_id":5578,"first_name":"Jesse","last_name":"McGlynn"},{"driver_id":495,"first_name":"Louvenia","last_name":"Kertzmann"},{"driver_id":4176,"first_name":"Harry","last_name":"Senger"}]'
+      string: '[{"driver_id":6132,"first_name":"Jarrett","last_name":"Reichel"},{"driver_id":7510,"first_name":"Casandra","last_name":"Jones"},{"driver_id":332,"first_name":"Veda","last_name":"Hahn"},{"driver_id":2481,"first_name":"Ebba","last_name":"Cronin"},{"driver_id":7121,"first_name":"Mattie","last_name":"Goodwin"},{"driver_id":1922,"first_name":"Bella","last_name":"Blanda"},{"driver_id":7948,"first_name":"Juana","last_name":"Abshire"},{"driver_id":6542,"first_name":"Isac","last_name":"Crooks"},{"driver_id":7144,"first_name":"Kelley","last_name":"Bartell"},{"driver_id":7765,"first_name":"Rhiannon","last_name":"Sauer"}]'
     http_version: 
-  recorded_at: Tue, 30 Dec 2014 21:57:16 GMT
+  recorded_at: Fri, 09 Jan 2015 23:30:15 GMT
 recorded_with: VCR 2.9.3
