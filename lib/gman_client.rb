@@ -13,37 +13,37 @@ module GmanClient
     attr_accessor :url, :token_url, :client_id, :client_secret
 
     def drivers
-      respond = request.api.v1.drivers.get
-      convert_payload(respond)
+      response = request.api.v1.drivers.get
+      convert_payload(response)
     end
 
     def driver_commission_histories
-      respond = request.api.v1.driver_commissions_history.get
-      convert_payload(respond)
+      response = request.api.v1.driver_commissions_history.get
+      convert_payload(response)
     end
 
     def driver_commission_histories_by_paid_date(paid_date)
-      respond = request.api.v1.driver_commissions_history_by_paid_date
+      response = request.api.v1.driver_commissions_history_by_paid_date
                 .get(:params => { :paid_date => paid_date })
-      convert_payload(respond)
+      convert_payload(response)
     end
 
     def inventory_items
-      respond = request.api.v1.inventory.items.get
-      convert_payload(respond)
+      response = request.api.v1.inventory.items.get
+      convert_payload(response)
     end
 
     def inventory_items_like_id_description(item_id, in_item_description)
-      respond = request.api.v1.inventory.items_like_id_description
+      response = request.api.v1.inventory.items_like_id_description
                 .get(:params => { :item_id => item_id,
                                   :in_item_description => in_item_description })
-      convert_payload(respond)
+      convert_payload(response)
     end
 
     def inventory_items_by_id(item_id)
-      respond = request.api.v1.inventory.items_by_id
+      response = request.api.v1.inventory.items_by_id
                 .get(:params => { :item_id => item_id })
-      convert_payload(respond)
+      convert_payload(response)
     end
 
     def request
@@ -64,8 +64,8 @@ module GmanClient
       JSON.parse(response)['access_token']
     end
 
-    def convert_payload(respond)
-      respond.payload.first.nil? ? [respond.to_h] : respond.map(&:to_h)
+    def convert_payload(response)
+      response.payload.first.nil? ? [response.to_h] : response.map(&:to_h)
     end
   end
 end
