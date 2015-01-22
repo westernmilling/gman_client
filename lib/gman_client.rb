@@ -14,18 +14,36 @@ module GmanClient
 
     def drivers
       respond = request.api.v1.drivers.get
-      respond.map(&:to_h)
+      convert_payload(respond)
     end
 
     def driver_commission_histories
       respond = request.api.v1.driver_commissions_history.get
-      respond.map(&:to_h)
+      convert_payload(respond)
     end
 
     def driver_commission_histories_by_paid_date(paid_date)
       respond = request.api.v1.driver_commissions_history_by_paid_date
                 .get(:params => { :paid_date => paid_date })
-      respond.map(&:to_h)
+      convert_payload(respond)
+    end
+
+    def inventory_items
+      respond = request.api.v1.inventory.items.get
+      convert_payload(respond)
+    end
+
+    def inventory_items_like_id_description(item_id, in_item_description)
+      respond = request.api.v1.inventory.items_like_id_description
+                .get(:params => { :item_id => item_id,
+                                  :in_item_description => in_item_description })
+      convert_payload(respond)
+    end
+
+    def inventory_items_by_id(item_id)
+      respond = request.api.v1.inventory.items_by_id
+                .get(:params => { :item_id => item_id })
+      convert_payload(respond)
     end
 
     def request
@@ -44,6 +62,10 @@ module GmanClient
                                  :client_secret => @client_secret.dup
 
       JSON.parse(response)['access_token']
+    end
+
+    def convert_payload(respond)
+      respond.payload.first.nil? ? [respond.to_h] : respond.map(&:to_h)
     end
   end
 end
