@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'codeclimate-test-reporter', :group => :test, :require => nil
+gem 'coveralls', :require => false, :group => 'test'
 # Specify your gem's dependencies in gman_client.gemspec
 gemspec

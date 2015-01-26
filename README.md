@@ -1,4 +1,4 @@
-[![Code Climate](https://codeclimate.com/github/michaelachrisco/gman_client/badges/gpa.svg)](https://codeclimate.com/github/michaelachrisco/gman_client) [![Test Coverage](https://codeclimate.com/github/michaelachrisco/gman_client/badges/coverage.svg)](https://codeclimate.com/github/michaelachrisco/gman_client)
+[![Build Status](https://travis-ci.org/westernmilling/gman_client.svg?branch=master)](https://travis-ci.org/westernmilling/gman_client) [![Coverage Status](https://coveralls.io/repos/westernmilling/gman_client/badge.svg)](https://coveralls.io/r/westernmilling/gman_client)
 # GmanClient
 
 Gem hooks into the Grossman API.
