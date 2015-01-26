@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/westernmilling/gman_client.png?label=ready&title=Ready)](https://waffle.io/westernmilling/gman_client)
 [![Build Status](https://travis-ci.org/westernmilling/gman_client.svg?branch=master)](https://travis-ci.org/westernmilling/gman_client) [![Coverage Status](https://coveralls.io/repos/westernmilling/gman_client/badge.svg)](https://coveralls.io/r/westernmilling/gman_client)
 # GmanClient
 
