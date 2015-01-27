@@ -16,7 +16,7 @@ RSpec.describe GmanClient do
     let(:driver) { client_response.first }
 
     it 'client response will not be empty' do
-      expect(client_response.empty?).to be_falsey
+      is_expected.not_to be_empty
     end
 
     it 'responds with a hash list' do

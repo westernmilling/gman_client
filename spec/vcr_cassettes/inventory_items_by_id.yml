@@ -1,0 +1,87 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3000/oauth/token
+    body:
+      encoding: US-ASCII
+      string: grant_type=client_credentials&client_id=f444a467ddbbaed52297d61a3edc5efd93e9292fc542058786aa13fa366865a3&client_secret=d137a94543da86e52214d3ed86b015f9299ad2fc66681637600afad814cd7d2b
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '183'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - no-store
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"9aa8f7755d55659030a38874c13f35af"'
+      X-Request-Id:
+      - f5398a6f-aedf-415c-9218-678c99fd52f6
+      X-Runtime:
+      - '0.017000'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"005bbad3c36eed1a3d68582a54ac3844a10273f75cbd0e3d8a6d0e713cce7477","token_type":"bearer","expires_in":7200,"created_at":1421885634}'
+    http_version: 
+  recorded_at: Thu, 22 Jan 2015 00:13:54 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/inventory/items_by_id.json?item_id=9370
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer 005bbad3c36eed1a3d68582a54ac3844a10273f75cbd0e3d8a6d0e713cce7477
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"6f346f20f0d5722e04c451e3cdfa7dea"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2c806d36-a617-4c46-aa48-1ca57101e7af
+      X-Runtime:
+      - '0.012000'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"item_id":9370,"in_item_description":"Rachelle"}]'
+    http_version: 
+  recorded_at: Thu, 22 Jan 2015 00:13:54 GMT
+recorded_with: VCR 2.9.3
