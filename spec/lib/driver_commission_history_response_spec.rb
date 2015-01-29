@@ -16,7 +16,11 @@ RSpec.describe GmanClient do
   describe '.driver_commission_histories' do
     let(:response) do
       VCR.use_cassette('driver_commission_histories') do
-        gman = GmanClient::GC.new(url, token_url, client_id, client_secret)
+        gman = Gman::Client.new(:url => url,
+                                :token_url => token_url,
+                                :client_id => client_id,
+                                :client_secret => client_secret
+        )
         gman.driver_commission_histories
       end
     end
@@ -59,10 +63,10 @@ RSpec.describe GmanClient do
   describe '.driver_commission_histories_by_paid_date' do
     let(:response) do
       VCR.use_cassette('driver_commission_histories_by_paid_date') do
-        gman = GmanClient::GC.new(:url => url,
-                                  :token_url => token_url,
-                                  :client_id => client_id,
-                                  :client_secret => client_secret
+        gman = Gman::Client.new(:url => url,
+                                :token_url => token_url,
+                                :client_id => client_id,
+                                :client_secret => client_secret
         )
         gman.driver_commission_histories_by_paid_date(
             Date.new(2012, 01, 01))

@@ -4,9 +4,9 @@ require 'json'
 require 'blanket'
 
 # GmanClient
-module GmanClient
-  # GC
-  class GC
+module Gman
+  # grossman +client+ object
+  class Client
     attr_accessor :url, :token_url, :client_id, :client_secret
     def initialize(options = {})
       @url =  options[:url] || ENV['WRAP_URL']

@@ -16,10 +16,10 @@ RSpec.describe GmanClient do
   describe '.drivers' do
     let(:response) do
       VCR.use_cassette('drivers') do
-        gman = GmanClient::GC.new(:url => url,
-                                  :token_url => token_url,
-                                  :client_id => client_id,
-                                  :client_secret => client_secret
+        gman = Gman::Client.new(:url => url,
+                                :token_url => token_url,
+                                :client_id => client_id,
+                                :client_secret => client_secret
         )
         gman.drivers
       end

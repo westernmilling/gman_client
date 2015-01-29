@@ -16,10 +16,10 @@ RSpec.describe GmanClient do
   describe '.inventory_items' do
     let(:response) do
       VCR.use_cassette('inventory_items') do
-        gman = GmanClient::GC.new(:url => url,
-                                  :token_url => token_url,
-                                  :client_id => client_id,
-                                  :client_secret => client_secret
+        gman = Gman::Client.new(:url => url,
+                                :token_url => token_url,
+                                :client_id => client_id,
+                                :client_secret => client_secret
         )
         gman.inventory_items
       end
@@ -49,10 +49,10 @@ RSpec.describe GmanClient do
   describe '.inventory_items_like_id_description' do
     let(:response) do
       VCR.use_cassette('inventory_items_like_id_description') do
-        gman = GmanClient::GC.new(:url => url,
-                                  :token_url => token_url,
-                                  :client_id => client_id,
-                                  :client_secret => client_secret
+        gman = Gman::Client.new(:url => url,
+                                :token_url => token_url,
+                                :client_id => client_id,
+                                :client_secret => client_secret
         )
         gman.inventory_items_like_id_description(9370, 'Rachelle')
       end
@@ -82,10 +82,10 @@ RSpec.describe GmanClient do
   describe '.inventory_items_by_id' do
     let(:response) do
       VCR.use_cassette('inventory_items_by_id') do
-        gman = GmanClient::GC.new(:url => url,
-                                  :token_url => token_url,
-                                  :client_id => client_id,
-                                  :client_secret => client_secret
+        gman = Gman::Client.new(:url => url,
+                                :token_url => token_url,
+                                :client_id => client_id,
+                                :client_secret => client_secret
         )
         gman.inventory_items_by_id(9370)
       end
