@@ -5,7 +5,7 @@ http_interactions:
     uri: http://localhost:3000/oauth/token
     body:
       encoding: US-ASCII
-      string: grant_type=client_credentials&client_id=f444a467ddbbaed52297d61a3edc5efd93e9292fc542058786aa13fa366865a3&client_secret=d137a94543da86e52214d3ed86b015f9299ad2fc66681637600afad814cd7d2b
+      string: grant_type=client_credentials&client_id=d137a94543da86e52214d3ed86b015f9299ad2fc66681637600afad814cd7d2b&client_secret=f444a467ddbbaed52297d61a3edc5efd93e9292fc542058786aa13fa366865a3
     headers:
       Accept:
       - "*/*; q=0.5, application/xml"
@@ -35,18 +35,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - '"640affc4d26b80c0e4dc44416bb3e589"'
+      - '"6ff97241a82664917077fffd783759ff"'
       X-Request-Id:
-      - a325b476-5a96-409d-9349-c2e89e618b07
+      - 9a1a3067-9118-4f28-835f-f0ac48df4efc
       X-Runtime:
-      - '0.024000'
+      - '0.031000'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"access_token":"efdf8ff7a7df653c6c379e0e3cb74d8214040826b8578ab8759f21cdbd2da75d","token_type":"bearer","expires_in":7200,"created_at":1420846215}'
+      string: '{"access_token":"8ec677165b5d501bc33fb8af101c8f27a3ec187cbd2f791ca7fa8f4fda6f6b0a","token_type":"bearer","expires_in":7200,"created_at":1423683723}'
     http_version: 
-  recorded_at: Fri, 09 Jan 2015 23:30:15 GMT
+  recorded_at: Wed, 11 Feb 2015 19:42:03 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/drivers.json
@@ -55,7 +55,7 @@ http_interactions:
       string: ''
     headers:
       Authorization:
-      - Bearer efdf8ff7a7df653c6c379e0e3cb74d8214040826b8578ab8759f21cdbd2da75d
+      - Bearer 8ec677165b5d501bc33fb8af101c8f27a3ec187cbd2f791ca7fa8f4fda6f6b0a
   response:
     status:
       code: 200
@@ -70,18 +70,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - '"a1e9f0a0d177f5326958b695fbdb4efe"'
+      - '"b0746c66cc59489bf514f6cd6bfaa265"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 03db7fda-a1a0-493c-9263-010c812d41f7
+      - 0bd78262-897c-4c5b-88ed-c8d66c2b8d61
       X-Runtime:
-      - '0.014000'
+      - '0.032000'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '[{"driver_id":6132,"first_name":"Jarrett","last_name":"Reichel"},{"driver_id":7510,"first_name":"Casandra","last_name":"Jones"},{"driver_id":332,"first_name":"Veda","last_name":"Hahn"},{"driver_id":2481,"first_name":"Ebba","last_name":"Cronin"},{"driver_id":7121,"first_name":"Mattie","last_name":"Goodwin"},{"driver_id":1922,"first_name":"Bella","last_name":"Blanda"},{"driver_id":7948,"first_name":"Juana","last_name":"Abshire"},{"driver_id":6542,"first_name":"Isac","last_name":"Crooks"},{"driver_id":7144,"first_name":"Kelley","last_name":"Bartell"},{"driver_id":7765,"first_name":"Rhiannon","last_name":"Sauer"}]'
+      string: '[{"driver_id":4474,"active_fg":null,"driver_type":"DR","sub_hauler_fg":null,"first_name":"Theo","last_name":"Franecki"},{"driver_id":828,"active_fg":null,"driver_type":"DR","sub_hauler_fg":null,"first_name":"Marcia","last_name":"Greenfelder"},{"driver_id":2279,"active_fg":null,"driver_type":"DR","sub_hauler_fg":null,"first_name":"Lisette","last_name":"Anderson"},{"driver_id":1758,"active_fg":null,"driver_type":"DR","sub_hauler_fg":null,"first_name":"Margret","last_name":"Muller"},{"driver_id":2134,"active_fg":null,"driver_type":"DR","sub_hauler_fg":null,"first_name":"Cloyd","last_name":"Dare"},{"driver_id":2068,"active_fg":null,"driver_type":"DR","sub_hauler_fg":null,"first_name":"Nels","last_name":"Gaylord"},{"driver_id":5974,"active_fg":null,"driver_type":"DR","sub_hauler_fg":null,"first_name":"Isidro","last_name":"McCullough"},{"driver_id":1938,"active_fg":null,"driver_type":"DR","sub_hauler_fg":null,"first_name":"Thelma","last_name":"Schroeder"},{"driver_id":5775,"active_fg":null,"driver_type":"DR","sub_hauler_fg":null,"first_name":"Amya","last_name":"Wolff"},{"driver_id":2148,"active_fg":null,"driver_type":"DR","sub_hauler_fg":null,"first_name":"Ricky","last_name":"O''Keefe"}]'
     http_version: 
-  recorded_at: Fri, 09 Jan 2015 23:30:15 GMT
+  recorded_at: Wed, 11 Feb 2015 19:42:03 GMT
 recorded_with: VCR 2.9.3

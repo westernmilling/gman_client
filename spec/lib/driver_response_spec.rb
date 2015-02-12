@@ -39,10 +39,14 @@ RSpec.describe GmanClient do
 
     describe 'first driver' do
       subject { client_response.first }
-
-      it { is_expected.to have_key(:driver_id) }
-      it { is_expected.to have_key(:first_name) }
-      it { is_expected.to have_key(:last_name) }
+      its(:keys) do
+        is_expected.to eq([:driver_id,
+                           :active_fg,
+                           :driver_type,
+                           :sub_hauler_fg,
+                           :first_name,
+                           :last_name])
+      end
     end
   end
 end
