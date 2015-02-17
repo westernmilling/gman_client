@@ -58,6 +58,7 @@ RSpec.describe GmanClient do
       it { is_expected.to have_key(:revenue) }
       it { is_expected.to have_key(:split_rate) }
       it { is_expected.to have_key(:total_freight_revenue) }
+      it { is_expected.to have_key(:drvrcomh_key) }
     end
   end
   describe '.driver_commission_histories_by_paid_date' do
@@ -69,7 +70,7 @@ RSpec.describe GmanClient do
                                 :client_secret => client_secret
         )
         gman.driver_commission_histories_by_paid_date(
-            Date.new(2012, 01, 01))
+            Date.new(2014, 01, 01))
       end
     end
     subject(:client_response) { response }
@@ -104,7 +105,8 @@ RSpec.describe GmanClient do
       it { is_expected.to have_key(:revenue) }
       it { is_expected.to have_key(:split_rate) }
       it { is_expected.to have_key(:total_freight_revenue) }
-      it { is_expected.to have_value(Date.new(2012, 01, 01).to_s) }
+      it { is_expected.to have_key(:drvrcomh_key) }
+      it { is_expected.to have_value(Date.new(2014, 01, 01).to_s) }
     end
   end
 end
