@@ -44,6 +44,7 @@ RSpec.describe GmanClient do
       it { is_expected.to have_key(:driver_id) }
       it { is_expected.to have_key(:backhauls) }
       it { is_expected.to have_key(:freight_revenue) }
+      it { is_expected.to have_key(:customer_name) }
       it { is_expected.to have_key(:customer_id) }
       it { is_expected.to have_key(:delivery_date) }
       it { is_expected.to have_key(:driver_rate) }
@@ -91,6 +92,7 @@ RSpec.describe GmanClient do
       it { is_expected.to have_key(:driver_id) }
       it { is_expected.to have_key(:backhauls) }
       it { is_expected.to have_key(:freight_revenue) }
+      it { is_expected.to have_key(:customer_name) }
       it { is_expected.to have_key(:customer_id) }
       it { is_expected.to have_key(:delivery_date) }
       it { is_expected.to have_key(:driver_rate) }
