@@ -2,7 +2,6 @@ language: ruby
 rvm:
 rvm:
   - "2.1.5"
-  - jruby-19mode
   - ruby-head
 script:
   - export WRAP_URL='http://localhost:3000'

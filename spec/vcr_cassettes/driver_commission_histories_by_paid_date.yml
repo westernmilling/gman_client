@@ -35,18 +35,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - '"efd32d795738cc8d665ba96eed73d07c"'
+      - '"f531b4d1b0efffdf2a8321b310fbef62"'
       X-Request-Id:
-      - be9f8747-4d7d-432e-8051-0d1b50c125ff
+      - 65de5d2c-e8de-4837-9cce-94f72b319217
       X-Runtime:
-      - '0.014000'
+      - '0.023000'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"access_token":"780d2aad7a0fff7fa57a105b4863054b26afc721fc2106e74ffe77dfd550d274","token_type":"bearer","expires_in":7200,"created_at":1424135241}'
+      string: '{"access_token":"d51c46187a159063b21e95adfb37ca89823e4a26a7041c9f1cda014179912095","token_type":"bearer","expires_in":7200,"created_at":1424798938}'
     http_version: 
-  recorded_at: Tue, 17 Feb 2015 01:07:21 GMT
+  recorded_at: Tue, 24 Feb 2015 17:28:58 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/driver_commissions_history_by_paid_date.json?paid_date=2014-01-01
@@ -55,7 +55,7 @@ http_interactions:
       string: ''
     headers:
       Authorization:
-      - Bearer 780d2aad7a0fff7fa57a105b4863054b26afc721fc2106e74ffe77dfd550d274
+      - Bearer d51c46187a159063b21e95adfb37ca89823e4a26a7041c9f1cda014179912095
   response:
     status:
       code: 200
@@ -70,48 +70,58 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - '"756d00089515a96b6be208fdb55258b4"'
+      - '"de34f510cbd8d1eeba09b647ea4489e8"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - bea3db6a-28cc-4ae1-8a6e-8eec2889e78a
+      - 592a564b-c507-4638-9538-389b3fcd7902
       X-Runtime:
-      - '0.016000'
+      - '0.021000'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '[{"driver_id":4711,"backhauls":"6053","freight_revenue":5571,"customer_id":1,"delivery_date":"2014-01-01","driver_rate":985,"freight_bill_number":6941,"fuel_surcharge":3620,"layover":"layover","movement_type":"MOVE
-        TYPE","other_hour_dollars":4587,"order_number_text":"2272","origin_name":"ORIGIN
-        NAME","paid_date":"2014-01-01","revenue":2184,"split_rate":1273,"total_freight_revenue":1075,"drvrcomh_key":"30562
-        77137427"},{"driver_id":6503,"backhauls":"2795","freight_revenue":3783,"customer_id":1,"delivery_date":"2014-01-01","driver_rate":7811,"freight_bill_number":1846,"fuel_surcharge":5635,"layover":"layover","movement_type":"MOVE
-        TYPE","other_hour_dollars":2979,"order_number_text":"4102","origin_name":"ORIGIN
-        NAME","paid_date":"2014-01-01","revenue":9549,"split_rate":2411,"total_freight_revenue":7483,"drvrcomh_key":"73253
-        87339820"},{"driver_id":934,"backhauls":"3184","freight_revenue":9835,"customer_id":1,"delivery_date":"2014-01-01","driver_rate":4289,"freight_bill_number":588,"fuel_surcharge":5417,"layover":"layover","movement_type":"MOVE
-        TYPE","other_hour_dollars":4437,"order_number_text":"5006","origin_name":"ORIGIN
-        NAME","paid_date":"2014-01-01","revenue":3718,"split_rate":8223,"total_freight_revenue":1422,"drvrcomh_key":"29858
-        30647157"},{"driver_id":8219,"backhauls":"1382","freight_revenue":8667,"customer_id":1,"delivery_date":"2014-01-01","driver_rate":8618,"freight_bill_number":128,"fuel_surcharge":2473,"layover":"layover","movement_type":"MOVE
-        TYPE","other_hour_dollars":8513,"order_number_text":"9376","origin_name":"ORIGIN
-        NAME","paid_date":"2014-01-01","revenue":6220,"split_rate":6413,"total_freight_revenue":1572,"drvrcomh_key":"67141
-        64864899"},{"driver_id":1418,"backhauls":"3733","freight_revenue":3327,"customer_id":1,"delivery_date":"2014-01-01","driver_rate":9648,"freight_bill_number":3922,"fuel_surcharge":4748,"layover":"layover","movement_type":"MOVE
-        TYPE","other_hour_dollars":2245,"order_number_text":"7688","origin_name":"ORIGIN
-        NAME","paid_date":"2014-01-01","revenue":4244,"split_rate":3237,"total_freight_revenue":859,"drvrcomh_key":"19673
-        28953246"},{"driver_id":1660,"backhauls":"9827","freight_revenue":221,"customer_id":1,"delivery_date":"2014-01-01","driver_rate":5021,"freight_bill_number":5423,"fuel_surcharge":1411,"layover":"layover","movement_type":"MOVE
-        TYPE","other_hour_dollars":4008,"order_number_text":"1374","origin_name":"ORIGIN
-        NAME","paid_date":"2014-01-01","revenue":5648,"split_rate":6150,"total_freight_revenue":1651,"drvrcomh_key":"35383
-        74386364"},{"driver_id":5435,"backhauls":"7195","freight_revenue":5445,"customer_id":1,"delivery_date":"2014-01-01","driver_rate":7467,"freight_bill_number":9528,"fuel_surcharge":3568,"layover":"layover","movement_type":"MOVE
-        TYPE","other_hour_dollars":9888,"order_number_text":"8622","origin_name":"ORIGIN
-        NAME","paid_date":"2014-01-01","revenue":9761,"split_rate":460,"total_freight_revenue":5636,"drvrcomh_key":"35926
-        26152520"},{"driver_id":1887,"backhauls":"2501","freight_revenue":6681,"customer_id":1,"delivery_date":"2014-01-01","driver_rate":3784,"freight_bill_number":8376,"fuel_surcharge":5542,"layover":"layover","movement_type":"MOVE
-        TYPE","other_hour_dollars":9385,"order_number_text":"1483","origin_name":"ORIGIN
-        NAME","paid_date":"2014-01-01","revenue":6268,"split_rate":5944,"total_freight_revenue":442,"drvrcomh_key":"14715
-        22214528"},{"driver_id":3970,"backhauls":"2800","freight_revenue":4439,"customer_id":1,"delivery_date":"2014-01-01","driver_rate":7642,"freight_bill_number":3394,"fuel_surcharge":5253,"layover":"layover","movement_type":"MOVE
-        TYPE","other_hour_dollars":7738,"order_number_text":"5873","origin_name":"ORIGIN
-        NAME","paid_date":"2014-01-01","revenue":6761,"split_rate":243,"total_freight_revenue":4711,"drvrcomh_key":"57929
-        72686150"},{"driver_id":3262,"backhauls":"6763","freight_revenue":6428,"customer_id":1,"delivery_date":"2014-01-01","driver_rate":1870,"freight_bill_number":9338,"fuel_surcharge":6329,"layover":"layover","movement_type":"MOVE
-        TYPE","other_hour_dollars":588,"order_number_text":"7774","origin_name":"ORIGIN
-        NAME","paid_date":"2014-01-01","revenue":8586,"split_rate":2313,"total_freight_revenue":1268,"drvrcomh_key":"68661
-        56448883"}]'
+      string: '[{"driver_id":1,"backhauls":"2556","freight_revenue":7645,"customer_id":6444,"customer_name":"Melody,
+        Crooks","delivery_date":"2014-01-01","driver_rate":5285,"freight_bill_number":2353,"fuel_surcharge":9953,"layover":"layover","movement_type":"MOVE
+        TYPE","other_hour_dollars":4982,"order_number_text":"4661","origin_name":"ORIGIN
+        NAME","paid_date":"2014-01-01","revenue":2844,"split_rate":8631,"total_freight_revenue":3791,"drvrcomh_key":"66162
+        82244413"},{"driver_id":2,"backhauls":"4166","freight_revenue":1315,"customer_id":5822,"customer_name":"Margarette,
+        Pfeffer","delivery_date":"2014-01-01","driver_rate":7459,"freight_bill_number":5524,"fuel_surcharge":829,"layover":"layover","movement_type":"MOVE
+        TYPE","other_hour_dollars":2842,"order_number_text":"2795","origin_name":"ORIGIN
+        NAME","paid_date":"2014-01-01","revenue":8613,"split_rate":4820,"total_freight_revenue":2547,"drvrcomh_key":"70522
+        72877278"},{"driver_id":3,"backhauls":"3567","freight_revenue":7325,"customer_id":4995,"customer_name":"Kade,
+        Swift","delivery_date":"2014-01-01","driver_rate":5728,"freight_bill_number":9772,"fuel_surcharge":6843,"layover":"layover","movement_type":"MOVE
+        TYPE","other_hour_dollars":8416,"order_number_text":"2315","origin_name":"ORIGIN
+        NAME","paid_date":"2014-01-01","revenue":1676,"split_rate":1262,"total_freight_revenue":2622,"drvrcomh_key":"31571
+        81489827"},{"driver_id":4,"backhauls":"8546","freight_revenue":6192,"customer_id":8318,"customer_name":"Hunter,
+        Mayert","delivery_date":"2014-01-01","driver_rate":2847,"freight_bill_number":3529,"fuel_surcharge":1598,"layover":"layover","movement_type":"MOVE
+        TYPE","other_hour_dollars":6627,"order_number_text":"5604","origin_name":"ORIGIN
+        NAME","paid_date":"2014-01-01","revenue":2994,"split_rate":3163,"total_freight_revenue":4268,"drvrcomh_key":"23428
+        71616719"},{"driver_id":5,"backhauls":"0512","freight_revenue":8653,"customer_id":2120,"customer_name":"Cole,
+        Mann","delivery_date":"2014-01-01","driver_rate":9327,"freight_bill_number":2758,"fuel_surcharge":4553,"layover":"layover","movement_type":"MOVE
+        TYPE","other_hour_dollars":1768,"order_number_text":"0912","origin_name":"ORIGIN
+        NAME","paid_date":"2014-01-01","revenue":6355,"split_rate":7262,"total_freight_revenue":4763,"drvrcomh_key":"19614
+        42114463"},{"driver_id":6,"backhauls":"6984","freight_revenue":5764,"customer_id":5074,"customer_name":"Haley,
+        Fay","delivery_date":"2014-01-01","driver_rate":8282,"freight_bill_number":8137,"fuel_surcharge":7365,"layover":"layover","movement_type":"MOVE
+        TYPE","other_hour_dollars":1843,"order_number_text":"1371","origin_name":"ORIGIN
+        NAME","paid_date":"2014-01-01","revenue":6372,"split_rate":2128,"total_freight_revenue":2666,"drvrcomh_key":"52534
+        40742422"},{"driver_id":7,"backhauls":"3492","freight_revenue":9442,"customer_id":6267,"customer_name":"Jaycee,
+        Price","delivery_date":"2014-01-01","driver_rate":4549,"freight_bill_number":5262,"fuel_surcharge":5176,"layover":"layover","movement_type":"MOVE
+        TYPE","other_hour_dollars":7638,"order_number_text":"7876","origin_name":"ORIGIN
+        NAME","paid_date":"2014-01-01","revenue":6152,"split_rate":3030,"total_freight_revenue":6934,"drvrcomh_key":"86525
+        20717784"},{"driver_id":8,"backhauls":"7260","freight_revenue":2502,"customer_id":5229,"customer_name":"Libbie,
+        Cartwright","delivery_date":"2014-01-01","driver_rate":7447,"freight_bill_number":4187,"fuel_surcharge":859,"layover":"layover","movement_type":"MOVE
+        TYPE","other_hour_dollars":2811,"order_number_text":"1653","origin_name":"ORIGIN
+        NAME","paid_date":"2014-01-01","revenue":3286,"split_rate":9699,"total_freight_revenue":2273,"drvrcomh_key":"38738
+        03566005"},{"driver_id":9,"backhauls":"2452","freight_revenue":8541,"customer_id":7173,"customer_name":"Alivia,
+        Effertz","delivery_date":"2014-01-01","driver_rate":2711,"freight_bill_number":5299,"fuel_surcharge":3824,"layover":"layover","movement_type":"MOVE
+        TYPE","other_hour_dollars":2226,"order_number_text":"7952","origin_name":"ORIGIN
+        NAME","paid_date":"2014-01-01","revenue":6537,"split_rate":6035,"total_freight_revenue":8089,"drvrcomh_key":"60153
+        82521744"},{"driver_id":10,"backhauls":"4286","freight_revenue":775,"customer_id":4866,"customer_name":"Jerry,
+        Hickle","delivery_date":"2014-01-01","driver_rate":7379,"freight_bill_number":4361,"fuel_surcharge":3343,"layover":"layover","movement_type":"MOVE
+        TYPE","other_hour_dollars":3928,"order_number_text":"1875","origin_name":"ORIGIN
+        NAME","paid_date":"2014-01-01","revenue":6246,"split_rate":8623,"total_freight_revenue":7020,"drvrcomh_key":"44054
+        59156840"}]'
     http_version: 
-  recorded_at: Tue, 17 Feb 2015 01:07:21 GMT
+  recorded_at: Tue, 24 Feb 2015 17:28:58 GMT
 recorded_with: VCR 2.9.3
