@@ -1,27 +1,10 @@
 require 'spec_helper'
-require 'gman_client'
-require 'vcr'
-require 'httparty'
-require 'webmock'
-require 'support/vcr'
 
 RSpec.describe GmanClient do
-  let(:url) { 'http://localhost:3000' }
-  let(:token_url) { 'http://localhost:3000/oauth/token' }
-  # rubocop:disable Metrics/LineLength
-  let(:client_id) { 'd137a94543da86e52214d3ed86b015f9299ad2fc66681637600afad814cd7d2b' }
-  let(:client_secret) { 'f444a467ddbbaed52297d61a3edc5efd93e9292fc542058786aa13fa366865a3' }
-  # rubocop:enable Metrics/LineLength
-
   describe '.driver_commission_histories' do
     let(:response) do
       VCR.use_cassette('driver_commission_histories') do
-        gman = Gman::Client.new(:url => url,
-                                :token_url => token_url,
-                                :client_id => client_id,
-                                :client_secret => client_secret
-        )
-        gman.driver_commission_histories
+        gman_adapter.driver_commission_histories
       end
     end
 
@@ -65,12 +48,7 @@ RSpec.describe GmanClient do
   describe '.driver_commission_histories_by_paid_date' do
     let(:response) do
       VCR.use_cassette('driver_commission_histories_by_paid_date') do
-        gman = Gman::Client.new(:url => url,
-                                :token_url => token_url,
-                                :client_id => client_id,
-                                :client_secret => client_secret
-        )
-        gman.driver_commission_histories_by_paid_date(
+        gman_adapter.driver_commission_histories_by_paid_date(
             Date.new(2014, 01, 01))
       end
     end

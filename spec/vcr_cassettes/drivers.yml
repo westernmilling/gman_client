@@ -35,18 +35,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - '"6ff97241a82664917077fffd783759ff"'
+      - '"0f4b70434fd2b04f04b5585fae61cd82"'
       X-Request-Id:
-      - 9a1a3067-9118-4f28-835f-f0ac48df4efc
+      - feef8d8c-f05c-4325-b775-e67f84eedcac
       X-Runtime:
-      - '0.031000'
+      - '0.016000'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"access_token":"8ec677165b5d501bc33fb8af101c8f27a3ec187cbd2f791ca7fa8f4fda6f6b0a","token_type":"bearer","expires_in":7200,"created_at":1423683723}'
+      string: '{"access_token":"809eb7e39031e67b45b67297a83942e476b899b762ba75f99103e8e0825f432a","token_type":"bearer","expires_in":7200,"created_at":1424907844}'
     http_version: 
-  recorded_at: Wed, 11 Feb 2015 19:42:03 GMT
+  recorded_at: Wed, 25 Feb 2015 23:44:04 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/drivers.json
@@ -55,7 +55,7 @@ http_interactions:
       string: ''
     headers:
       Authorization:
-      - Bearer 8ec677165b5d501bc33fb8af101c8f27a3ec187cbd2f791ca7fa8f4fda6f6b0a
+      - Bearer 809eb7e39031e67b45b67297a83942e476b899b762ba75f99103e8e0825f432a
   response:
     status:
       code: 200
@@ -70,18 +70,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - '"b0746c66cc59489bf514f6cd6bfaa265"'
+      - '"e3538e3c02a937a6510e6944a39bc372"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0bd78262-897c-4c5b-88ed-c8d66c2b8d61
+      - 6551cafc-8dfc-49e9-a94d-c5c1b99c65ad
       X-Runtime:
-      - '0.032000'
+      - '0.021000'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '[{"driver_id":4474,"active_fg":null,"driver_type":"DR","sub_hauler_fg":null,"first_name":"Theo","last_name":"Franecki"},{"driver_id":828,"active_fg":null,"driver_type":"DR","sub_hauler_fg":null,"first_name":"Marcia","last_name":"Greenfelder"},{"driver_id":2279,"active_fg":null,"driver_type":"DR","sub_hauler_fg":null,"first_name":"Lisette","last_name":"Anderson"},{"driver_id":1758,"active_fg":null,"driver_type":"DR","sub_hauler_fg":null,"first_name":"Margret","last_name":"Muller"},{"driver_id":2134,"active_fg":null,"driver_type":"DR","sub_hauler_fg":null,"first_name":"Cloyd","last_name":"Dare"},{"driver_id":2068,"active_fg":null,"driver_type":"DR","sub_hauler_fg":null,"first_name":"Nels","last_name":"Gaylord"},{"driver_id":5974,"active_fg":null,"driver_type":"DR","sub_hauler_fg":null,"first_name":"Isidro","last_name":"McCullough"},{"driver_id":1938,"active_fg":null,"driver_type":"DR","sub_hauler_fg":null,"first_name":"Thelma","last_name":"Schroeder"},{"driver_id":5775,"active_fg":null,"driver_type":"DR","sub_hauler_fg":null,"first_name":"Amya","last_name":"Wolff"},{"driver_id":2148,"active_fg":null,"driver_type":"DR","sub_hauler_fg":null,"first_name":"Ricky","last_name":"O''Keefe"}]'
+      string: '[{"driver_id":1,"active_fg":1,"driver_type":"DR","sub_hauler_fg":1,"first_name":"Elmore","last_name":"Quigley"},{"driver_id":2,"active_fg":0,"driver_type":"DR","sub_hauler_fg":0,"first_name":"Duane","last_name":"Altenwerth"},{"driver_id":3,"active_fg":1,"driver_type":"DR","sub_hauler_fg":1,"first_name":"Mose","last_name":"Cummings"},{"driver_id":4,"active_fg":0,"driver_type":"DR","sub_hauler_fg":0,"first_name":"Stone","last_name":"Grady"},{"driver_id":5,"active_fg":1,"driver_type":"DR","sub_hauler_fg":0,"first_name":"Retha","last_name":"Gutmann"},{"driver_id":6,"active_fg":1,"driver_type":"DR","sub_hauler_fg":1,"first_name":"Libby","last_name":"Zemlak"},{"driver_id":7,"active_fg":0,"driver_type":"DR","sub_hauler_fg":0,"first_name":"Kiara","last_name":"Bartell"},{"driver_id":8,"active_fg":1,"driver_type":"DR","sub_hauler_fg":1,"first_name":"Jerry","last_name":"Runolfsson"},{"driver_id":9,"active_fg":0,"driver_type":"DR","sub_hauler_fg":0,"first_name":"George","last_name":"Kerluke"},{"driver_id":10,"active_fg":1,"driver_type":"DR","sub_hauler_fg":1,"first_name":"Laverne","last_name":"MacGyver"}]'
     http_version: 
-  recorded_at: Wed, 11 Feb 2015 19:42:03 GMT
+  recorded_at: Wed, 25 Feb 2015 23:44:04 GMT
 recorded_with: VCR 2.9.3
