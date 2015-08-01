@@ -16,8 +16,8 @@ RSpec.describe GmanClient do
     end
 
     it 'responds with a hash list' do
-      is_expected.to satisfy {
-                         |h| h.is_a?(Array) && h.all? { |e| e.is_a?(Hash) }
+      is_expected.to satisfy { |h|
+                       h.is_a?(Array) && h.all? { |e| e.is_a?(Hash) }
                      }
     end
 
@@ -49,7 +49,7 @@ RSpec.describe GmanClient do
     let(:response) do
       VCR.use_cassette('driver_commission_histories_by_paid_date') do
         gman_adapter.driver_commission_histories_by_paid_date(
-            Date.new(2014, 01, 01))
+          Date.new(2014, 01, 01))
       end
     end
     subject(:client_response) { response }
@@ -59,8 +59,8 @@ RSpec.describe GmanClient do
     end
 
     it 'responds with a hash list' do
-      is_expected.to satisfy {
-                         |h| h.is_a?(Array) && h.all? { |e| e.is_a?(Hash) }
+      is_expected.to satisfy { |h|
+                       h.is_a?(Array) && h.all? { |e| e.is_a?(Hash) }
                      }
     end
 

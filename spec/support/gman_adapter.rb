@@ -10,5 +10,5 @@ def gman_adapter
                    :token_url => token_url,
                    :client_id => client_id,
                    :client_secret => client_secret
-  )
+                  )
 end
