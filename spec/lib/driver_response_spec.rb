@@ -15,8 +15,8 @@ RSpec.describe GmanClient do
     end
 
     it 'responds with a hash list' do
-      is_expected.to satisfy {
-                         |h| h.is_a?(Array) && h.all? { |e| e.is_a?(Hash) }
+      is_expected.to satisfy { |h|
+                       h.is_a?(Array) && h.all? { |e| e.is_a?(Hash) }
                      }
     end
 
