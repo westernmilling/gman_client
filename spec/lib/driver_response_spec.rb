@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe GmanClient do
+RSpec.describe Gman::Client do
   describe '.drivers' do
     let(:response) do
       VCR.use_cassette('drivers') do

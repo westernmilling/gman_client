@@ -6,9 +6,9 @@ def gman_adapter
   client_secret = 'f444a467ddbbaed52297d61a3edc5efd93e9292fc542058786aa13fa366865a3'
   # rubocop:enable Metrics/LineLength
 
-  Gman::Client.new(:url => url,
-                   :token_url => token_url,
-                   :client_id => client_id,
-                   :client_secret => client_secret
+  Gman::Client.new(url: url,
+                   token_url: token_url,
+                   client_id: client_id,
+                   client_secret: client_secret
                   )
 end

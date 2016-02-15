@@ -45,7 +45,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"access_token":"0b9a70731c14ca830b68b3d5624e20dfd4a56a1359c9b59d8269cdbe9e930094","token_type":"bearer","expires_in":7200,"created_at":1424907843}'
-    http_version: 
+    http_version:
   recorded_at: Wed, 25 Feb 2015 23:44:03 GMT
 - request:
     method: get
@@ -122,6 +122,6 @@ http_interactions:
         FLOOR","other_hour_dollars":8201,"order_number_text":"0065","origin_name":"ORIGIN
         NAME","paid_date":"2014-01-01","revenue":2480,"split_rate":6634,"total_freight_revenue":4212,"drvrcomh_key":"78688
         88857276"}]'
-    http_version: 
+    http_version:
   recorded_at: Wed, 25 Feb 2015 23:44:03 GMT
 recorded_with: VCR 2.9.3
