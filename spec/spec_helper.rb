@@ -1,13 +1,14 @@
-require 'coveralls'
-Coveralls.wear!
+require 'codeclimate-test-reporter'
+CodeClimate::TestReporter.start
+
 require 'rspec/its'
 require 'spec_helper'
 require 'gman_client'
-require 'vcr'
 require 'httparty'
 require 'webmock'
-require 'support/vcr'
-require 'support/gman_adapter'
+
+Dir[File.join(GmanClient.root, 'spec/support/**/*.rb')].each { |f| require f }
+
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true

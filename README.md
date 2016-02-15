@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/westernmilling/gman_client.svg?branch=master)](https://travis-ci.org/westernmilling/gman_client) [![Coverage Status](https://coveralls.io/repos/westernmilling/gman_client/badge.svg)](https://coveralls.io/r/westernmilling/gman_client)
+
 # GmanClient
 
 Gem hooks into the Grossman API.
@@ -8,38 +9,44 @@ Gem hooks into the Grossman API.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'gman_client', :git => 'git@github.com:michaelachrisco/gman_client.git'
+gem 'gman_client', git: 'git@github.com:westernmilling/gman_client.git'
 ```
 
 And then execute:
 
     $ bundle
 
-Make sure to include:
-* WRAP_URL: This URL is the url for the api. Example ```export WRAP_URL="http://example.com"```
-* CLIENT_ID: Doorkeeper App ID. Example: ```export CLIENT_ID="1234567"```
-* CLIENT_SECRET: Doorkeeper App Secret. Example: ```export CLIENT_SECRET="1234567"```
-* TOKEN_URL: URL for token. Example:  ```export TOKEN_URL="http://example.com/oauth/token"```
-
-Or initialize:
-```Ruby
-        gman = Gman::Client.new(:url => "http://example.com",
-                                  :token_url => "1234567",
-                                  :client_id => "1234567",
-                                  :client_secret => "http://example.com/oauth/token"
-        )
-```
+## Usage
 
 How to use:
-```Ruby
-gman.drivers
-gman.driver_commission_histories
-gman.driver_commission_histories_by_paid_date(DATE.new())
+
+```ruby
+client = Gman::Client.new(
+  url: "gman services url",
+  client_id: "client id",
+  client_secret: "client secret"
+)
+```
+
+```ruby
+client.drivers
+client.driver_commission_histories
+client.driver_commission_histories_by_paid_date(DATE.new())
+```
+
+## Running the tests
+
+```bash
+export GMAN_SERVICES_URL=<Gman Services URL>
+export GMAN_SERVICES_CLIENT_ID=<Client ID>
+export GMAN_SERVICES_CLIENT_SECRET=<Client Secret>
+
+bundle exec rspec
 ```
 
 ## Contributing
 
-1. Fork it ( https://github.com/michaelachrisco/gman_client/fork )
+1. Fork it ( https://github.com/westernmilling/gman_client/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
