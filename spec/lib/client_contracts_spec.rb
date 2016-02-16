@@ -30,12 +30,28 @@ RSpec.describe Gman::Client do
         :contract_date,
         :contract_type,
         :quantity,
-        :delivered_bushels,
+        :delivered_quantity,
         :price,
         :freight_adjustment,
         :from_date,
-        :to_date
+        :to_date,
+        :commodity,
+        :unit_of_measure
       )
+    end
+    describe 'commodity' do
+      subject { response.first[:commodity] }
+
+      its(:keys) do
+        is_expected.to include(:commodity_id, :description, :conversion_factor)
+      end
+    end
+    describe 'unit_of_measure' do
+      subject { response.first[:unit_of_measure] }
+
+      its(:keys) do
+        is_expected.to include(:uom_id, :description)
+      end
     end
   end
 end

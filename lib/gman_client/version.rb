@@ -1,4 +1,3 @@
-# VERSION
 module GmanClient
-  VERSION = '0.0.7'.freeze
+  VERSION = '0.0.8'.freeze
 end
