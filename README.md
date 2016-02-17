@@ -1,8 +1,12 @@
-[![Build Status](https://travis-ci.org/westernmilling/gman_client.svg?branch=master)](https://travis-ci.org/westernmilling/gman_client) [![Coverage Status](https://coveralls.io/repos/westernmilling/gman_client/badge.svg)](https://coveralls.io/r/westernmilling/gman_client)
+[![Build Status](https://travis-ci.org/westernmilling/gman_client.svg?branch=master)](https://travis-ci.org/westernmilling/gman_client)
+[![Code Climate](https://codeclimate.com/github/westernmilling/gman_client/badges/gpa.svg)](https://codeclimate.com/github/westernmilling/gman_client)
+[![Test Coverage](https://codeclimate.com/github/westernmilling/gman_client/badges/coverage.svg)](https://codeclimate.com/github/westernmilling/gman_client/coverage)
+[![Dependency Status](https://gemnasium.com/westernmilling/gman_client.svg)](https://gemnasium.com/westernmilling/gman_client)
+[![Gem Version](https://badge.fury.io/rb/gman_client.svg)](https://badge.fury.io/rb/gman_client)
 
 # GmanClient
 
-Gem hooks into the Grossman API.
+Ruby client for the gman-services Grossman API.
 
 ## Installation
 
@@ -31,7 +35,7 @@ client = Gman::Client.new(
 ```ruby
 client.drivers
 client.driver_commission_histories
-client.driver_commission_histories_by_paid_date(DATE.new())
+client.driver_commission_histories_by_paid_date(DATE.new)
 ```
 
 ## Running the tests

@@ -13,7 +13,6 @@ module GmanClient
 
         response
           .map(&:to_h)
-          .map { |x| transform_response_item(x) }
       end
 
       def clean_filters(filters)
@@ -22,12 +21,6 @@ module GmanClient
         end
 
         Hash[filters.to_a & keep.to_a]
-      end
-
-      def transform_response_item(hash)
-        hash.each_with_object({}) do |(k, v), memo|
-          memo[k.to_s.gsub(/cont_/, '').to_sym] = v
-        end
       end
     end
   end
