@@ -1,3 +1,4 @@
+require 'gman_client/api/orders'
 require 'gman_client/commodity_merchandising/contracts'
 require 'gman_client/utility'
 require 'gman_client/version'

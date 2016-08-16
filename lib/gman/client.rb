@@ -1,9 +1,11 @@
 module Gman
   class Client
+    include GmanClient::Api::Orders
     include GmanClient::CommodityMerchandising::Contracts
     include GmanClient::Utility
 
     attr_accessor :url, :client_id, :client_secret
+
     def initialize(options)
       @url = options[:url]
       @token_url = "#{url}/oauth/token"
@@ -66,7 +68,7 @@ module Gman
           .items_by_id
           .get(params: { item_id: item_id })
       end
-      convert_payload(response)
+      convert_payload([response])
     end
   end
 end
