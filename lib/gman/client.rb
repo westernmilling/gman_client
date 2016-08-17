@@ -68,7 +68,7 @@ module Gman
           .items_by_id
           .get(params: { item_id: item_id })
       end
-      convert_payload([response])
+      convert_payload([response].flatten)
     end
   end
 end
