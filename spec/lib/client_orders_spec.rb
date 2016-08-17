@@ -52,8 +52,8 @@ RSpec.describe Gman::Client do
       let(:response) do
         {
           body: {
-            error: "invalid_client",
-            error_description: "..."
+            error: 'invalid_client',
+            error_description: '...'
           }.to_json,
           status: 401
         }
@@ -67,13 +67,13 @@ RSpec.describe Gman::Client do
     context 'when the order is found' do
       before do
         stub_request(:post, "#{stubbed_url}/oauth/token")
-          .to_return({
-            body: { access_token: access_token }.to_json, status: 200 }
+          .to_return(
+            body: { access_token: access_token }.to_json, status: 200
           )
         stub_request(
           :get, "#{stubbed_url}/api/v1/orders/#{order_hash[:uuid]}.json"
         )
-          .to_return({ body: order_hash.to_json, status: 200 })
+          .to_return(body: order_hash.to_json, status: 200)
       end
       let(:access_token) { SecureRandom.uuid }
 
