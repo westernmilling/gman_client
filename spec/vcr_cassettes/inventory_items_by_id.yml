@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:3000/oauth/token
+    uri: "<GMAN_SERVICES_URL>/oauth/token"
     body:
       encoding: US-ASCII
-      string: grant_type=client_credentials&client_id=f444a467ddbbaed52297d61a3edc5efd93e9292fc542058786aa13fa366865a3&client_secret=d137a94543da86e52214d3ed86b015f9299ad2fc66681637600afad814cd7d2b
+      string: grant_type=client_credentials&client_id=<GMAN_SERVICES_CLIENT_ID>&client_secret=<GMAN_SERVICES_CLIENT_SECRET>
     headers:
       Accept:
       - "*/*; q=0.5, application/xml"
@@ -35,27 +35,27 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - '"9aa8f7755d55659030a38874c13f35af"'
+      - '"062d093ffd884c929884c8bec05d8b69"'
       X-Request-Id:
-      - f5398a6f-aedf-415c-9218-678c99fd52f6
+      - 2683b8b9-00a4-4708-99d7-ab8cd8630160
       X-Runtime:
-      - '0.017000'
+      - '0.046000'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"access_token":"005bbad3c36eed1a3d68582a54ac3844a10273f75cbd0e3d8a6d0e713cce7477","token_type":"bearer","expires_in":7200,"created_at":1421885634}'
+      string: '{"access_token":"29a72bedd04f3f98a24b9e6de74a680b649d21f2c746c5277f0c546c49f92caf","token_type":"bearer","created_at":1471454476}'
     http_version: 
-  recorded_at: Thu, 22 Jan 2015 00:13:54 GMT
+  recorded_at: Wed, 17 Aug 2016 17:21:16 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/inventory/items_by_id.json?item_id=9370
+    uri: "<GMAN_SERVICES_URL>/api/v1/inventory/items_by_id.json?item_id=80"
     body:
       encoding: US-ASCII
       string: ''
     headers:
       Authorization:
-      - Bearer 005bbad3c36eed1a3d68582a54ac3844a10273f75cbd0e3d8a6d0e713cce7477
+      - Bearer 29a72bedd04f3f98a24b9e6de74a680b649d21f2c746c5277f0c546c49f92caf
   response:
     status:
       code: 200
@@ -70,18 +70,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - '"6f346f20f0d5722e04c451e3cdfa7dea"'
+      - '"7c5fe23f612a40f341c1836661852316"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2c806d36-a617-4c46-aa48-1ca57101e7af
+      - 918da3e4-68ea-480f-8c2a-70db832bfd06
       X-Runtime:
-      - '0.012000'
+      - '0.382000'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '[{"item_id":9370,"in_item_description":"Rachelle"}]'
+      string: '{"item_id":"80","in_item_description":"Corn Gluten Feed"}'
     http_version: 
-  recorded_at: Thu, 22 Jan 2015 00:13:54 GMT
-recorded_with: VCR 2.9.3
+  recorded_at: Wed, 17 Aug 2016 17:21:16 GMT
+recorded_with: VCR 3.0.1

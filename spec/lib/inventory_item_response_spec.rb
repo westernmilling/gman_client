@@ -60,7 +60,7 @@ RSpec.describe GmanClient do
   describe '.inventory_items_by_id' do
     let(:response) do
       VCR.use_cassette('inventory_items_by_id') do
-        gman_adapter.inventory_items_by_id(9370)
+        gman_adapter.inventory_items_by_id('80')
       end
     end
     subject(:client_response) { response }
@@ -80,8 +80,8 @@ RSpec.describe GmanClient do
 
       it { is_expected.to have_key(:item_id) }
       it { is_expected.to have_key(:in_item_description) }
-      it { is_expected.to have_value(9370) }
-      it { is_expected.to have_value('Rachelle') }
+      it { is_expected.to have_value('80') }
+      it { is_expected.to have_value('Corn Gluten Feed') }
     end
   end
 end
