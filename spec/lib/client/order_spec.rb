@@ -11,7 +11,6 @@ RSpec.describe Gman::Client do
       client_secret: 'client_secret'
     )
   end
-
   let(:orders_hash) do
     [
       {

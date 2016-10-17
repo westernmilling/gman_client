@@ -11,7 +11,6 @@ RSpec.describe Gman::Client do
       client_secret: 'client_secret'
     )
   end
-
   let(:orders_hash) do
     [
       {
@@ -38,6 +37,7 @@ RSpec.describe Gman::Client do
     let(:access_token) { SecureRandom.uuid }
     let(:order_hash) { orders_hash.sample }
     let(:stubbed_url) { 'http://test.local' }
+    let(:params) { {} }
 
     subject do
       described
@@ -70,32 +70,40 @@ RSpec.describe Gman::Client do
           .to_return(
             body: { access_token: access_token }.to_json, status: 200
           )
+
+        query_string = params.map { |k, v| "#{k}=#{v}" }.join('&')
         stub_request(
-          :get, "#{stubbed_url}/api/v1/orders.json?#{params.to_query}"
+          :get, "#{stubbed_url}/api/v1/orders.json?#{query_string}"
         )
-          .to_return(body: order_hash.to_json, status: 200)
+          .to_return(body: [order_hash].to_json, status: 200)
       end
       let(:access_token) { SecureRandom.uuid }
       let(:params) do
         {
-          warehouse_id_eq: 0,
-          order_number_eq: 0
+          warehouse_id_eq: order_hash[:warehouse_id],
+          order_number_eq: order_hash[:order_number]
         }
       end
 
       it 'should respond with a Hash' do
-        expect(subject).to be_kind_of(Hash)
+        expect(subject).to be_kind_of(Array)
       end
 
       describe 'response' do
-        its([:order_number]) { is_expected.to eq order_hash[:order_number] }
-        its([:order_key]) { is_expected.to eq order_hash[:order_key] }
-        its([:quantity_shipped]) do
-          is_expected.to eq order_hash[:quantity_shipped]
+        its(:size) { is_expected.to eq 1 }
+
+        describe 'first match' do
+          subject { described[0] }
+
+          its([:order_number]) { is_expected.to eq order_hash[:order_number] }
+          its([:order_key]) { is_expected.to eq order_hash[:order_key] }
+          its([:quantity_shipped]) do
+            is_expected.to eq order_hash[:quantity_shipped]
+          end
+          its([:ship_date]) { is_expected.to eq order_hash[:ship_date] }
+          its([:warehouse_id]) { is_expected.to eq order_hash[:warehouse_id] }
+          its([:uuid]) { is_expected.to eq order_hash[:uuid] }
         end
-        its([:ship_date]) { is_expected.to eq order_hash[:ship_date] }
-        its([:warehouse_id]) { is_expected.to eq order_hash[:warehouse_id] }
-        its([:uuid]) { is_expected.to eq order_hash[:uuid] }
       end
     end
   end
