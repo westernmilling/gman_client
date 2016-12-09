@@ -36,7 +36,7 @@ RSpec.describe Gman::Client do
       let(:access_token) { SecureRandom.uuid }
 
       it 'should respond with passed' do
-        expect(JSON.parse(subject)[:health_check]).to eq('Passed')
+        expect(subject).to eq('Passed')
       end
     end
   end

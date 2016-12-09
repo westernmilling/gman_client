@@ -1,11 +1,9 @@
-require 'codeclimate-test-reporter'
-CodeClimate::TestReporter.start
-
 require 'rspec/its'
 require 'spec_helper'
 require 'gman_client'
 require 'httparty'
 require 'webmock'
+require 'securerandom'
 
 Dir[File.join(GmanClient.root, 'spec/support/**/*.rb')].each { |f| require f }
 
