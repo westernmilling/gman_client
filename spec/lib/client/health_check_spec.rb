@@ -15,28 +15,37 @@ RSpec.describe Gman::Client do
   describe '#health_check' do
     let(:described) { client.health_check }
     let(:access_token) { SecureRandom.uuid }
-    let(:health_check_hash) { { health_check: 'Passed' } }
     let(:stubbed_url) { 'http://test.local' }
+
+    before do
+      stub_request(:post, "#{stubbed_url}/oauth/token")
+        .to_return(
+          body: { access_token: access_token }.to_json, status: 200
+        )
+      stub_request(
+        :get, "#{stubbed_url}/api/v1/health_check.json"
+      )
+        .to_return(body: health_check_hash.to_json, status: 200)
+    end
+    let(:access_token) { SecureRandom.uuid }
 
     subject do
       described
     end
 
-    context 'when the order is found' do
-      before do
-        stub_request(:post, "#{stubbed_url}/oauth/token")
-          .to_return(
-            body: { access_token: access_token }.to_json, status: 200
-          )
-        stub_request(
-          :get, "#{stubbed_url}/api/v1/health_check.json"
-        )
-          .to_return(body: health_check_hash.to_json, status: 200)
-      end
-      let(:access_token) { SecureRandom.uuid }
+    context 'when the health check is successful' do
+      let(:health_check_hash) { { health_check: 'Passed' } }
 
-      it 'should respond with passed' do
-        expect(subject).to eq('Passed')
+      it 'should be true' do
+        expect(subject).to eq(true)
+      end
+    end
+
+    context 'when the health check fails' do
+      let(:health_check_hash) { { health_check: 'Failed' } }
+
+      it 'should be false' do
+        expect(subject).to eq(false)
       end
     end
   end

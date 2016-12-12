@@ -6,10 +6,7 @@ module GmanClient
       def health_check
         response = request.api.v1.health_check.get
 
-        unless response.to_h[:health_check] == 'Passed'
-          raise 'Health check failed. Relativity may be down'
-        end
-        response.to_h[:health_check]
+        response.to_h[:health_check] == 'Passed'
       end
     end
   end
