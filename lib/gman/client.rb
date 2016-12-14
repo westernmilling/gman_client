@@ -1,5 +1,6 @@
 module Gman
   class Client
+    include GmanClient::Api::CustomerContracts
     include GmanClient::Api::Orders
     include GmanClient::Api::HealthCheck
     include GmanClient::CommodityMerchandising::Contracts
