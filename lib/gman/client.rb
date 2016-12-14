@@ -51,12 +51,13 @@ module Gman
           .v1
           .inventory
           .items_like_id_description
-          .get(params:
-                {
-                  item_id: item_id,
-                  in_item_description: in_item_description
-                }
-              )
+          .get(
+            params:
+              {
+                item_id: item_id,
+                in_item_description: in_item_description
+              }
+          )
       end
       convert_payload(response)
     end
