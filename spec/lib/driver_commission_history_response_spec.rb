@@ -49,7 +49,8 @@ RSpec.describe GmanClient do
     let(:response) do
       VCR.use_cassette('driver_commission_histories_by_paid_date') do
         gman_adapter.driver_commission_histories_by_paid_date(
-          Date.new(2014, 01, 01))
+          Date.new(2014, 1, 1)
+        )
       end
     end
     subject(:client_response) { response }
@@ -86,7 +87,7 @@ RSpec.describe GmanClient do
       it { is_expected.to have_key(:split_rate) }
       it { is_expected.to have_key(:total_freight_revenue) }
       it { is_expected.to have_key(:drvrcomh_key) }
-      it { is_expected.to have_value(Date.new(2014, 01, 01).to_s) }
+      it { is_expected.to have_value(Date.new(2014, 1, 1).to_s) }
     end
   end
 end

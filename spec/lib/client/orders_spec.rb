@@ -85,7 +85,7 @@ RSpec.describe Gman::Client do
         }
       end
 
-      it 'should respond with a Hash' do
+      it 'should respond with an Array' do
         expect(subject).to be_kind_of(Array)
       end
 

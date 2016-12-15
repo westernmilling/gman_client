@@ -1,5 +1,6 @@
 module Gman
   class Client
+    include GmanClient::Api::CustomerContracts
     include GmanClient::Api::Orders
     include GmanClient::Api::HealthCheck
     include GmanClient::CommodityMerchandising::Contracts
@@ -50,12 +51,13 @@ module Gman
           .v1
           .inventory
           .items_like_id_description
-          .get(params:
-                {
-                  item_id: item_id,
-                  in_item_description: in_item_description
-                }
-              )
+          .get(
+            params:
+              {
+                item_id: item_id,
+                in_item_description: in_item_description
+              }
+          )
       end
       convert_payload(response)
     end
