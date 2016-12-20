@@ -35,18 +35,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - '"b808e4ed8e86e2b5d600c47ff9c4ab20"'
+      - '"0ae1c7559c2e6b42c16cf59ffd1306ff"'
       X-Request-Id:
-      - 7947d044-05aa-47d6-8a5b-ea21efb59cae
+      - 99d792c5-90fd-4aff-8c3e-d47b5fdd2c07
       X-Runtime:
-      - '0.496000'
+      - '0.052000'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"access_token":"644d2f5c9e6f1f8dea53e51ee75999e968c7133b95d30693cd4e5546e52d4afc","token_type":"bearer","created_at":1455666571}'
+      string: '{"access_token":"693c423c971de4c621605a60e5dea2f21553f05729864a8061321854ec390071","token_type":"bearer","created_at":1482272218}'
     http_version: 
-  recorded_at: Tue, 16 Feb 2016 23:49:31 GMT
+  recorded_at: Tue, 20 Dec 2016 22:16:58 GMT
 - request:
     method: get
     uri: "<GMAN_SERVICES_URL>/api/v1/commodity_merchandising/contracts.json?q%5Bcustomer_id_eq%5D=100001"
@@ -55,7 +55,7 @@ http_interactions:
       string: ''
     headers:
       Authorization:
-      - Bearer 644d2f5c9e6f1f8dea53e51ee75999e968c7133b95d30693cd4e5546e52d4afc
+      - Bearer 693c423c971de4c621605a60e5dea2f21553f05729864a8061321854ec390071
   response:
     status:
       code: 200
@@ -70,38 +70,38 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - '"10cbe24a927fc19a78b6d406e5218b6b"'
+      - '"c055d2733ad6698948cb11bae30ff1d9"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f791f78d-31ca-4cd2-809e-6f28a76998f4
+      - 84372fb6-cf16-4f04-af53-1ad6fbdb9fe8
       X-Runtime:
-      - '0.719000'
+      - '0.096000'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '[{"contract_id":"000100001P","customer_id":100001,"commodity_id":1005,"contract_number":100001,"price":366.0,"freight_adjustment":7.0,"commodity":{"commodity_id":1005,"description":"laboriosam
-        5","conversion_factor":2000},"unit_of_measure":{"uom_id":5,"description":"earum
-        5"},"contract_date":"2016-02-16","contract_type":"P","quantity":100000.0,"delivered_quantity":75850.0,"from_date":"2016-02-16","to_date":"2017-02-16"},{"contract_id":"000100002P","customer_id":100001,"commodity_id":1001,"contract_number":100002,"price":372.0,"freight_adjustment":7.0,"commodity":{"commodity_id":1001,"description":"impedit
-        1","conversion_factor":60},"unit_of_measure":{"uom_id":7,"description":"ut
-        7"},"contract_date":"2016-02-16","contract_type":"P","quantity":100000.0,"delivered_quantity":29113.0,"from_date":"2016-02-16","to_date":"2017-02-16"},{"contract_id":"000100003P","customer_id":100001,"commodity_id":1005,"contract_number":100003,"price":369.0,"freight_adjustment":0.0,"commodity":{"commodity_id":1005,"description":"laboriosam
-        5","conversion_factor":2000},"unit_of_measure":{"uom_id":9,"description":"eum
-        9"},"contract_date":"2016-02-16","contract_type":"P","quantity":50000.0,"delivered_quantity":24188.0,"from_date":"2016-02-16","to_date":"2017-02-16"},{"contract_id":"000100004P","customer_id":100001,"commodity_id":1004,"contract_number":100004,"price":367.0,"freight_adjustment":5.0,"commodity":{"commodity_id":1004,"description":"officia
-        4","conversion_factor":56},"unit_of_measure":{"uom_id":11,"description":"rerum
-        11"},"contract_date":"2016-02-16","contract_type":"P","quantity":50000.0,"delivered_quantity":35358.0,"from_date":"2016-02-16","to_date":"2017-02-16"},{"contract_id":"000100005P","customer_id":100001,"commodity_id":1003,"contract_number":100005,"price":255.0,"freight_adjustment":7.0,"commodity":{"commodity_id":1003,"description":"consequatur
-        3","conversion_factor":56},"unit_of_measure":{"uom_id":13,"description":"labore
-        13"},"contract_date":"2016-02-16","contract_type":"P","quantity":50000.0,"delivered_quantity":35793.0,"from_date":"2016-02-16","to_date":"2017-02-16"},{"contract_id":"000100006P","customer_id":100001,"commodity_id":1005,"contract_number":100006,"price":381.0,"freight_adjustment":6.0,"commodity":{"commodity_id":1005,"description":"laboriosam
-        5","conversion_factor":2000},"unit_of_measure":{"uom_id":15,"description":"officiis
-        15"},"contract_date":"2016-02-16","contract_type":"P","quantity":50000.0,"delivered_quantity":10604.0,"from_date":"2016-02-16","to_date":"2017-02-16"},{"contract_id":"000100007P","customer_id":100001,"commodity_id":1001,"contract_number":100007,"price":267.0,"freight_adjustment":5.0,"commodity":{"commodity_id":1001,"description":"impedit
-        1","conversion_factor":60},"unit_of_measure":{"uom_id":17,"description":"ea
-        17"},"contract_date":"2016-02-16","contract_type":"P","quantity":50000.0,"delivered_quantity":23875.0,"from_date":"2016-02-16","to_date":"2017-02-16"},{"contract_id":"000100008P","customer_id":100001,"commodity_id":1005,"contract_number":100008,"price":317.0,"freight_adjustment":5.0,"commodity":{"commodity_id":1005,"description":"laboriosam
-        5","conversion_factor":2000},"unit_of_measure":{"uom_id":19,"description":"optio
-        19"},"contract_date":"2016-02-16","contract_type":"P","quantity":50000.0,"delivered_quantity":451.0,"from_date":"2016-02-16","to_date":"2017-02-16"},{"contract_id":"000100009P","customer_id":100001,"commodity_id":1002,"contract_number":100009,"price":241.0,"freight_adjustment":0.0,"commodity":{"commodity_id":1002,"description":"et
-        2","conversion_factor":56},"unit_of_measure":{"uom_id":21,"description":"esse
-        21"},"contract_date":"2016-02-16","contract_type":"P","quantity":100000.0,"delivered_quantity":13409.0,"from_date":"2016-02-16","to_date":"2017-02-16"},{"contract_id":"000100010P","customer_id":100001,"commodity_id":1004,"contract_number":100010,"price":330.0,"freight_adjustment":0.0,"commodity":{"commodity_id":1004,"description":"officia
-        4","conversion_factor":56},"unit_of_measure":{"uom_id":23,"description":"blanditiis
-        23"},"contract_date":"2016-02-16","contract_type":"P","quantity":100000.0,"delivered_quantity":31093.0,"from_date":"2016-02-16","to_date":"2017-02-16"}]'
+      string: '[{"contract_id":"0010000100P","customer_id":100001,"commodity_id":1004,"inv_contract_id":"10000100","location_id":1,"contract_number":100001,"price":378.0,"freight_adjustment":6.0,"commodity":{"commodity_id":1004,"description":"laudantium
+        4","conversion_factor":2000},"unit_of_measure":{"uom_id":5,"description":"cupiditate
+        5"},"contract_date":"2016-12-20","contract_type":"Purchase","quantity":100000.0,"delivered_quantity":51985.0,"from_date":"2016-12-20","to_date":"2017-12-20"},{"contract_id":"0010000200P","customer_id":100001,"commodity_id":1002,"inv_contract_id":"10000200","location_id":2,"contract_number":100002,"price":255.0,"freight_adjustment":7.0,"commodity":{"commodity_id":1002,"description":"sunt
+        2","conversion_factor":56},"unit_of_measure":{"uom_id":7,"description":"sapiente
+        7"},"contract_date":"2016-12-20","contract_type":"Purchase","quantity":50000.0,"delivered_quantity":13090.0,"from_date":"2016-12-20","to_date":"2017-12-20"},{"contract_id":"0010000300S","customer_id":100001,"commodity_id":1001,"inv_contract_id":"10000300","location_id":3,"contract_number":100003,"price":349.0,"freight_adjustment":6.0,"commodity":{"commodity_id":1001,"description":"et
+        1","conversion_factor":56},"unit_of_measure":{"uom_id":9,"description":"modi
+        9"},"contract_date":"2016-12-20","contract_type":"Sale","quantity":50000.0,"delivered_quantity":22587.0,"from_date":"2016-12-20","to_date":"2017-12-20"},{"contract_id":"0010000400P","customer_id":100001,"commodity_id":1004,"inv_contract_id":"10000400","location_id":4,"contract_number":100004,"price":203.0,"freight_adjustment":0.0,"commodity":{"commodity_id":1004,"description":"laudantium
+        4","conversion_factor":2000},"unit_of_measure":{"uom_id":11,"description":"occaecati
+        11"},"contract_date":"2016-12-20","contract_type":"Purchase","quantity":100000.0,"delivered_quantity":42224.0,"from_date":"2016-12-20","to_date":"2017-12-20"},{"contract_id":"0010000500P","customer_id":100001,"commodity_id":1002,"inv_contract_id":"10000500","location_id":5,"contract_number":100005,"price":215.0,"freight_adjustment":0.0,"commodity":{"commodity_id":1002,"description":"sunt
+        2","conversion_factor":56},"unit_of_measure":{"uom_id":13,"description":"rem
+        13"},"contract_date":"2016-12-20","contract_type":"Purchase","quantity":50000.0,"delivered_quantity":48004.0,"from_date":"2016-12-20","to_date":"2017-12-20"},{"contract_id":"0010000600P","customer_id":100001,"commodity_id":1002,"inv_contract_id":"10000600","location_id":6,"contract_number":100006,"price":269.0,"freight_adjustment":7.0,"commodity":{"commodity_id":1002,"description":"sunt
+        2","conversion_factor":56},"unit_of_measure":{"uom_id":15,"description":"at
+        15"},"contract_date":"2016-12-20","contract_type":"Purchase","quantity":100000.0,"delivered_quantity":20011.0,"from_date":"2016-12-20","to_date":"2017-12-20"},{"contract_id":"0010000700P","customer_id":100001,"commodity_id":1001,"inv_contract_id":"10000700","location_id":7,"contract_number":100007,"price":331.0,"freight_adjustment":0.0,"commodity":{"commodity_id":1001,"description":"et
+        1","conversion_factor":56},"unit_of_measure":{"uom_id":17,"description":"aliquam
+        17"},"contract_date":"2016-12-20","contract_type":"Purchase","quantity":50000.0,"delivered_quantity":11840.0,"from_date":"2016-12-20","to_date":"2017-12-20"},{"contract_id":"0010000800P","customer_id":100001,"commodity_id":1003,"inv_contract_id":"10000800","location_id":8,"contract_number":100008,"price":304.0,"freight_adjustment":6.0,"commodity":{"commodity_id":1003,"description":"natus
+        3","conversion_factor":56},"unit_of_measure":{"uom_id":19,"description":"quia
+        19"},"contract_date":"2016-12-20","contract_type":"Purchase","quantity":100000.0,"delivered_quantity":47574.0,"from_date":"2016-12-20","to_date":"2017-12-20"},{"contract_id":"0010000900P","customer_id":100001,"commodity_id":1002,"inv_contract_id":"10000900","location_id":9,"contract_number":100009,"price":226.0,"freight_adjustment":0.0,"commodity":{"commodity_id":1002,"description":"sunt
+        2","conversion_factor":56},"unit_of_measure":{"uom_id":21,"description":"ipsa
+        21"},"contract_date":"2016-12-20","contract_type":"Purchase","quantity":100000.0,"delivered_quantity":72657.0,"from_date":"2016-12-20","to_date":"2017-12-20"},{"contract_id":"0010001000P","customer_id":100001,"commodity_id":1005,"inv_contract_id":"10001000","location_id":10,"contract_number":100010,"price":295.0,"freight_adjustment":5.0,"commodity":{"commodity_id":1005,"description":"ipsum
+        5","conversion_factor":2000},"unit_of_measure":{"uom_id":23,"description":"dolorem
+        23"},"contract_date":"2016-12-20","contract_type":"Purchase","quantity":100000.0,"delivered_quantity":90928.0,"from_date":"2016-12-20","to_date":"2017-12-20"}]'
     http_version: 
-  recorded_at: Tue, 16 Feb 2016 23:49:32 GMT
+  recorded_at: Tue, 20 Dec 2016 22:16:58 GMT
 recorded_with: VCR 3.0.1
