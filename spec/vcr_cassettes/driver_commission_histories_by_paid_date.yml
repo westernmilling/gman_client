@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:3000/oauth/token
+    uri: "<GMAN_SERVICES_URL>/oauth/token"
     body:
       encoding: US-ASCII
-      string: grant_type=client_credentials&client_id=d137a94543da86e52214d3ed86b015f9299ad2fc66681637600afad814cd7d2b&client_secret=f444a467ddbbaed52297d61a3edc5efd93e9292fc542058786aa13fa366865a3
+      string: grant_type=client_credentials&client_id=<GMAN_SERVICES_CLIENT_ID>&client_secret=<GMAN_SERVICES_CLIENT_SECRET>
     headers:
       Accept:
       - "*/*; q=0.5, application/xml"
@@ -44,18 +44,18 @@ http_interactions:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"access_token":"cfdfc88c68f5672b28245f10a4a69b751abdc7afcb4230ab060b7c53a16227a1","token_type":"bearer","expires_in":7200,"created_at":1424907844}'
-    http_version: 
+      string: '{"access_token":"353a2cbab066042919da50eeeafd1586f7710c2040dec596962bed66a5bdad94","token_type":"bearer","expires_in":7200,"created_at":1424907844}'
+    http_version:
   recorded_at: Wed, 25 Feb 2015 23:44:04 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/driver_commissions_history_by_paid_date.json?paid_date=2014-01-01
+    uri: "<GMAN_SERVICES_URL>/api/v1/driver_commissions_history_by_paid_date.json?paid_date=2014-01-01"
     body:
       encoding: US-ASCII
       string: ''
     headers:
       Authorization:
-      - Bearer cfdfc88c68f5672b28245f10a4a69b751abdc7afcb4230ab060b7c53a16227a1
+      - Bearer 353a2cbab066042919da50eeeafd1586f7710c2040dec596962bed66a5bdad94
   response:
     status:
       code: 200
@@ -122,6 +122,6 @@ http_interactions:
         FLOOR","other_hour_dollars":8201,"order_number_text":"0065","origin_name":"ORIGIN
         NAME","paid_date":"2014-01-01","revenue":2480,"split_rate":6634,"total_freight_revenue":4212,"drvrcomh_key":"78688
         88857276"}]'
-    http_version: 
+    http_version:
   recorded_at: Wed, 25 Feb 2015 23:44:04 GMT
-recorded_with: VCR 2.9.3
+recorded_with: VCR 3.0.1

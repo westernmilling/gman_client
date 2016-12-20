@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:3000/oauth/token
+    uri: "<GMAN_SERVICES_URL>/oauth/token"
     body:
       encoding: US-ASCII
-      string: grant_type=client_credentials&client_id=d137a94543da86e52214d3ed86b015f9299ad2fc66681637600afad814cd7d2b&client_secret=f444a467ddbbaed52297d61a3edc5efd93e9292fc542058786aa13fa366865a3
+      string: grant_type=client_credentials&client_id=<GMAN_SERVICES_CLIENT_ID>&client_secret=<GMAN_SERVICES_CLIENT_SECRET>
     headers:
       Accept:
       - "*/*; q=0.5, application/xml"
@@ -45,11 +45,11 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"access_token":"809eb7e39031e67b45b67297a83942e476b899b762ba75f99103e8e0825f432a","token_type":"bearer","expires_in":7200,"created_at":1424907844}'
-    http_version: 
+    http_version:
   recorded_at: Wed, 25 Feb 2015 23:44:04 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/drivers.json
+    uri: <GMAN_SERVICES_URL>/api/v1/drivers.json
     body:
       encoding: US-ASCII
       string: ''
@@ -82,6 +82,90 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '[{"driver_id":1,"active_fg":1,"driver_type":"DR","sub_hauler_fg":1,"first_name":"Elmore","last_name":"Quigley"},{"driver_id":2,"active_fg":0,"driver_type":"DR","sub_hauler_fg":0,"first_name":"Duane","last_name":"Altenwerth"},{"driver_id":3,"active_fg":1,"driver_type":"DR","sub_hauler_fg":1,"first_name":"Mose","last_name":"Cummings"},{"driver_id":4,"active_fg":0,"driver_type":"DR","sub_hauler_fg":0,"first_name":"Stone","last_name":"Grady"},{"driver_id":5,"active_fg":1,"driver_type":"DR","sub_hauler_fg":0,"first_name":"Retha","last_name":"Gutmann"},{"driver_id":6,"active_fg":1,"driver_type":"DR","sub_hauler_fg":1,"first_name":"Libby","last_name":"Zemlak"},{"driver_id":7,"active_fg":0,"driver_type":"DR","sub_hauler_fg":0,"first_name":"Kiara","last_name":"Bartell"},{"driver_id":8,"active_fg":1,"driver_type":"DR","sub_hauler_fg":1,"first_name":"Jerry","last_name":"Runolfsson"},{"driver_id":9,"active_fg":0,"driver_type":"DR","sub_hauler_fg":0,"first_name":"George","last_name":"Kerluke"},{"driver_id":10,"active_fg":1,"driver_type":"DR","sub_hauler_fg":1,"first_name":"Laverne","last_name":"MacGyver"}]'
-    http_version: 
+    http_version:
   recorded_at: Wed, 25 Feb 2015 23:44:04 GMT
-recorded_with: VCR 2.9.3
+- request:
+    method: post
+    uri: "<GMAN_SERVICES_URL>/oauth/token"
+    body:
+      encoding: US-ASCII
+      string: grant_type=client_credentials&client_id=<GMAN_SERVICES_CLIENT_ID>&client_secret=<GMAN_SERVICES_CLIENT_SECRET>
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '183'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - no-store
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"e49132c9a74b31ee6b8ff64c3985e677"'
+      X-Request-Id:
+      - e73d9c9d-c2f4-4e0f-98a5-eae6e0609c31
+      X-Runtime:
+      - '0.058000'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"405160692fecd21f960dbd444ca37f7a4b961171b7cee4d1b7862319cdaa7f55","token_type":"bearer","created_at":1482272568}'
+    http_version:
+  recorded_at: Tue, 20 Dec 2016 22:22:48 GMT
+- request:
+    method: get
+    uri: "<GMAN_SERVICES_URL>/api/v1/drivers.json"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer 405160692fecd21f960dbd444ca37f7a4b961171b7cee4d1b7862319cdaa7f55
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"2a7971077f9fe40cc85aba26e42ddd2c"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b5d36bd9-9ac4-4a3b-a281-74dc17f89d1a
+      X-Runtime:
+      - '0.091000'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"driver_id":8212,"first_name":"Jordane","last_name":"Quitzon","driver_type":"DR","sub_hauler_fg":null,"active_fg":1},{"driver_id":1040,"first_name":"Leatha","last_name":"Goldner","driver_type":"DR","sub_hauler_fg":1,"active_fg":null},{"driver_id":9625,"first_name":"Melody","last_name":"Kling","driver_type":"DR","sub_hauler_fg":1,"active_fg":1},{"driver_id":6175,"first_name":"Ashton","last_name":"Schoen","driver_type":"DR","sub_hauler_fg":1,"active_fg":1},{"driver_id":9453,"first_name":"Consuelo","last_name":"Weimann","driver_type":"DR","sub_hauler_fg":null,"active_fg":1},{"driver_id":5513,"first_name":"Sofia","last_name":"Farrell","driver_type":"DR","sub_hauler_fg":1,"active_fg":1},{"driver_id":6569,"first_name":"Stephania","last_name":"Stamm","driver_type":"DR","sub_hauler_fg":null,"active_fg":null},{"driver_id":4085,"first_name":"Elva","last_name":"Jaskolski","driver_type":"DR","sub_hauler_fg":null,"active_fg":1},{"driver_id":7847,"first_name":"Adella","last_name":"Okuneva","driver_type":"DR","sub_hauler_fg":null,"active_fg":1},{"driver_id":9743,"first_name":"Keith","last_name":"Mertz","driver_type":"DR","sub_hauler_fg":1,"active_fg":1},{"driver_id":8516,"first_name":"Florencio","last_name":"Barrows","driver_type":"DR","sub_hauler_fg":1,"active_fg":null},{"driver_id":1662,"first_name":"Carolyne","last_name":"Buckridge","driver_type":"DR","sub_hauler_fg":null,"active_fg":1},{"driver_id":3006,"first_name":"Jerel","last_name":"Nikolaus","driver_type":"DR","sub_hauler_fg":null,"active_fg":null},{"driver_id":5145,"first_name":"Trisha","last_name":"Shields","driver_type":"DR","sub_hauler_fg":null,"active_fg":1},{"driver_id":2987,"first_name":"Sid","last_name":"Ortiz","driver_type":"DR","sub_hauler_fg":1,"active_fg":1},{"driver_id":7409,"first_name":"Werner","last_name":"Bahringer","driver_type":"DR","sub_hauler_fg":null,"active_fg":null},{"driver_id":2195,"first_name":"Tabitha","last_name":"Schmeler","driver_type":"DR","sub_hauler_fg":1,"active_fg":1},{"driver_id":4854,"first_name":"Cletus","last_name":"Walker","driver_type":"DR","sub_hauler_fg":null,"active_fg":1},{"driver_id":7653,"first_name":"Pascale","last_name":"Carter","driver_type":"DR","sub_hauler_fg":null,"active_fg":null},{"driver_id":1735,"first_name":"Yolanda","last_name":"Kub","driver_type":"DR","sub_hauler_fg":null,"active_fg":1}]'
+    http_version:
+  recorded_at: Tue, 20 Dec 2016 22:22:48 GMT
+recorded_with: VCR 3.0.1

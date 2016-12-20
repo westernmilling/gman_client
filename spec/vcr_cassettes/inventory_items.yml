@@ -84,4 +84,88 @@ http_interactions:
       string: '[{"item_id":7634,"in_item_description":"Donnell"},{"item_id":4144,"in_item_description":"Shemar"},{"item_id":2167,"in_item_description":"Chris"},{"item_id":9617,"in_item_description":"Loyal"},{"item_id":1582,"in_item_description":"Jackson"},{"item_id":4874,"in_item_description":"Juanita"},{"item_id":2476,"in_item_description":"Stacey"},{"item_id":6119,"in_item_description":"Reba"},{"item_id":1574,"in_item_description":"Onie"},{"item_id":3881,"in_item_description":"Britney"}]'
     http_version: 
   recorded_at: Wed, 25 Feb 2015 23:44:04 GMT
-recorded_with: VCR 2.9.3
+- request:
+    method: post
+    uri: "<GMAN_SERVICES_URL>/oauth/token"
+    body:
+      encoding: US-ASCII
+      string: grant_type=client_credentials&client_id=<GMAN_SERVICES_CLIENT_ID>&client_secret=<GMAN_SERVICES_CLIENT_SECRET>
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '183'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - no-store
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"c036df64f0837afa7b6f66f397628d96"'
+      X-Request-Id:
+      - f52b8ed1-623e-4f27-9273-b02c25f34ab3
+      X-Runtime:
+      - '0.050000'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"1ea87588bb8f20a2ed054d0958f58ab4a4998fd0b10250771d268aa22949e3a4","token_type":"bearer","created_at":1482272535}'
+    http_version: 
+  recorded_at: Tue, 20 Dec 2016 22:22:15 GMT
+- request:
+    method: get
+    uri: "<GMAN_SERVICES_URL>/api/v1/inventory/items.json"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer 1ea87588bb8f20a2ed054d0958f58ab4a4998fd0b10250771d268aa22949e3a4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"355ff53426099bf476a031193b83a1b7"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 78284c60-0824-4cf7-a10f-8105c1e543ef
+      X-Runtime:
+      - '0.048000'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"item_id":7550,"in_item_description":"Lizeth"},{"item_id":4808,"in_item_description":"Andreane"},{"item_id":4417,"in_item_description":"Jan"},{"item_id":2413,"in_item_description":"Jannie"},{"item_id":2779,"in_item_description":"Wallace"},{"item_id":2546,"in_item_description":"Osbaldo"},{"item_id":7750,"in_item_description":"Jaiden"},{"item_id":7023,"in_item_description":"Deon"},{"item_id":1284,"in_item_description":"Estell"},{"item_id":2913,"in_item_description":"Sienna"}]'
+    http_version: 
+  recorded_at: Tue, 20 Dec 2016 22:22:15 GMT
+recorded_with: VCR 3.0.1

@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:3000/oauth/token
+    uri: "<GMAN_SERVICES_URL>/oauth/token"
     body:
       encoding: US-ASCII
-      string: grant_type=client_credentials&client_id=f444a467ddbbaed52297d61a3edc5efd93e9292fc542058786aa13fa366865a3&client_secret=d137a94543da86e52214d3ed86b015f9299ad2fc66681637600afad814cd7d2b
+      string: grant_type=client_credentials&client_id=<GMAN_SERVICES_CLIENT_ID>&client_secret=<GMAN_SERVICES_CLIENT_SECRET>
     headers:
       Accept:
       - "*/*; q=0.5, application/xml"
@@ -45,11 +45,11 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"access_token":"1e096801ad14a3b8251b683c127ff31bf6325baad1efdbc839e6f3852f555236","token_type":"bearer","expires_in":7200,"created_at":1421888460}'
-    http_version: 
+    http_version:
   recorded_at: Thu, 22 Jan 2015 01:01:00 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/inventory/items_like_id_description.json?in_item_description=Rachelle&item_id=9370
+    uri: <GMAN_SERVICES_URL>/api/v1/inventory/items_like_id_description.json?in_item_description=Rachelle&item_id=9370
     body:
       encoding: US-ASCII
       string: ''
@@ -82,6 +82,6 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '[{"item_id":9370,"in_item_description":"Rachelle"}]'
-    http_version: 
+    http_version:
   recorded_at: Thu, 22 Jan 2015 01:01:00 GMT
-recorded_with: VCR 2.9.3
+recorded_with: VCR 3.0.1

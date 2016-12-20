@@ -6,7 +6,7 @@ RSpec.describe Gman::Client do
   let(:customer_id) { 100_001 }
   let(:response) do
     VCR.use_cassette('contracts') do
-      client.contracts(customer_id_eq: 100_001)
+      client.contracts(customer_id_eq: 100_001, contract_type_eq: 'S')
     end
   end
   subject { response }
@@ -17,6 +17,14 @@ RSpec.describe Gman::Client do
   it 'should have responded with an array of hashes' do
     is_expected
       .to satisfy { |h| h.is_a?(Array) && h.all? { |e| e.is_a?(Hash) } }
+  end
+  it 'should match the customer filter' do
+    customer_ids = response.map { |hash| hash[:customer_id] }
+    expect(customer_ids).to all eq 100_001
+  end
+  it 'should match the contract type filter' do
+    contract_types = response.map { |hash| hash[:contract_type] }
+    expect(contract_types).to all eq 'Sale'
   end
 
   describe 'first contract' do
@@ -29,6 +37,7 @@ RSpec.describe Gman::Client do
         :contract_number,
         :contract_date,
         :contract_type,
+        :inv_contract_id,
         :quantity,
         :delivered_quantity,
         :price,

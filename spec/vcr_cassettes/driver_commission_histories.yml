@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:3000/oauth/token
+    uri: "<GMAN_SERVICES_URL>/oauth/token"
     body:
       encoding: US-ASCII
-      string: grant_type=client_credentials&client_id=d137a94543da86e52214d3ed86b015f9299ad2fc66681637600afad814cd7d2b&client_secret=f444a467ddbbaed52297d61a3edc5efd93e9292fc542058786aa13fa366865a3
+      string: grant_type=client_credentials&client_id=<GMAN_SERVICES_CLIENT_ID>&client_secret=<GMAN_SERVICES_CLIENT_SECRET>
     headers:
       Accept:
       - "*/*; q=0.5, application/xml"
@@ -49,7 +49,7 @@ http_interactions:
   recorded_at: Wed, 25 Feb 2015 23:44:03 GMT
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/driver_commissions_history.json
+    uri: <GMAN_SERVICES_URL>/api/v1/driver_commissions_history.json
     body:
       encoding: US-ASCII
       string: ''
@@ -124,4 +124,88 @@ http_interactions:
         88857276"}]'
     http_version:
   recorded_at: Wed, 25 Feb 2015 23:44:03 GMT
-recorded_with: VCR 2.9.3
+- request:
+    method: post
+    uri: "<GMAN_SERVICES_URL>/oauth/token"
+    body:
+      encoding: US-ASCII
+      string: grant_type=client_credentials&client_id=<GMAN_SERVICES_CLIENT_ID>&client_secret=<GMAN_SERVICES_CLIENT_SECRET>
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '183'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - no-store
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"37e499a1eada80f17cc0328921b8fe55"'
+      X-Request-Id:
+      - a91a20d9-edaa-468d-b104-429145f9655b
+      X-Runtime:
+      - '0.050000'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"8cf762be46b1177415a5976636e9ebfbf6fc01e3c585155a2176d5bf6d70baca","token_type":"bearer","created_at":1482272535}'
+    http_version:
+  recorded_at: Tue, 20 Dec 2016 22:22:15 GMT
+- request:
+    method: get
+    uri: "<GMAN_SERVICES_URL>/api/v1/driver_commissions_history.json"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer 8cf762be46b1177415a5976636e9ebfbf6fc01e3c585155a2176d5bf6d70baca
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"d751713988987e9331980363e24189ce"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 55ec56af-f0bc-4772-8ef3-dbfc86698291
+      X-Runtime:
+      - '0.040000'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version:
+  recorded_at: Tue, 20 Dec 2016 22:22:15 GMT
+recorded_with: VCR 3.0.1
