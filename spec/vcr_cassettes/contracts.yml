@@ -104,4 +104,43 @@ http_interactions:
         23"},"contract_date":"2016-12-20","contract_type":"Purchase","quantity":100000.0,"delivered_quantity":90928.0,"from_date":"2016-12-20","to_date":"2017-12-20"}]'
     http_version: 
   recorded_at: Tue, 20 Dec 2016 22:16:58 GMT
+- request:
+    method: get
+    uri: "<GMAN_SERVICES_URL>/api/v1/commodity_merchandising/contracts.json?q%5Bcontract_type_eq%5D=S&q%5Bcustomer_id_eq%5D=100001"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer 693c423c971de4c621605a60e5dea2f21553f05729864a8061321854ec390071
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"6568bcf4945b4fb3266f95ed24085cf9"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7c0a453c-d117-4b39-9b23-4f513d204072
+      X-Runtime:
+      - '0.056000'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"contract_id":"0010000300S","customer_id":100001,"commodity_id":1001,"inv_contract_id":"10000300","location_id":3,"contract_number":100003,"price":349.0,"freight_adjustment":6.0,"commodity":{"commodity_id":1001,"description":"et
+        1","conversion_factor":56},"unit_of_measure":{"uom_id":9,"description":"modi
+        9"},"contract_date":"2016-12-20","contract_type":"Sale","quantity":50000.0,"delivered_quantity":22587.0,"from_date":"2016-12-20","to_date":"2017-12-20"}]'
+    http_version: 
+  recorded_at: Tue, 20 Dec 2016 22:21:27 GMT
 recorded_with: VCR 3.0.1
