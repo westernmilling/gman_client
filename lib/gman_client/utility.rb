@@ -1,5 +1,13 @@
 module GmanClient
   module Utility
+    def get(resource, params)
+      request
+        .api
+        .v1
+        .send(resource)
+        .get(params: params)
+    end
+
     def request
       Blanket.wrap(
         @url,
