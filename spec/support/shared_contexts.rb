@@ -11,3 +11,13 @@ RSpec.shared_context 'grossman client' do
     )
   end
 end
+
+RSpec.shared_context 'new grossman client' do
+  let(:client) do
+    Gman::Client.new(
+      url: url,
+      client_id: client_id,
+      client_secret: client_secret
+    )
+  end
+end

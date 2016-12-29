@@ -1,8 +1,8 @@
 require 'spec_helper'
-require 'webmock'
 
 RSpec.describe Gman::Client do
-  include WebMock::API
+  before(:all) { VCR.turn_off! }
+  after(:all) { VCR.turn_on! }
 
   let(:client) do
     Gman::Client.new(
