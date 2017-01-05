@@ -2,8 +2,8 @@ require 'rspec/its'
 require 'spec_helper'
 require 'gman_client'
 require 'httparty'
-require 'webmock'
 require 'securerandom'
+require 'webmock/rspec'
 
 Dir[File.join(GmanClient.root, 'spec/support/**/*.rb')].each { |f| require f }
 

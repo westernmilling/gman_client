@@ -1,4 +1,5 @@
 require 'gman_client/api/customer_contracts'
+require 'gman_client/api/pick_up_orders'
 require 'gman_client/api/orders'
 require 'gman_client/api/health_check'
 require 'gman_client/commodity_merchandising/contracts'
