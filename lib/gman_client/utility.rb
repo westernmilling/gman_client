@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module GmanClient
   module Utility
     def get(resource, params)

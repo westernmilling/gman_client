@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def gman_adapter
   url = ENV['GMAN_SERVICES_URL']
   client_id = ENV['GMAN_SERVICES_CLIENT_ID']

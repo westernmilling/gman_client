@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.shared_context 'grossman client' do
   let(:client) do
     url = ENV['GMAN_SERVICES_URL']
