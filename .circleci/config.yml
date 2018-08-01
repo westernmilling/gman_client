@@ -3,7 +3,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/2-node-browsers
+      - image: circleci/ruby:2-node-browsers
 
     working_directory: ~/repo
 
