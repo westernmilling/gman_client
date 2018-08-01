@@ -16,10 +16,3 @@ Metrics/BlockLength:
 Style/ExpandPathArguments:
   Exclude:
     - 'lib/gman_client.rb'
-
-# Offense count: 2
-# Cop supports --auto-correct.
-# Configuration parameters: MinSize.
-# SupportedStyles: percent, brackets
-Style/SymbolArray:
-  EnforcedStyle: brackets
