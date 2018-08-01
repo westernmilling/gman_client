@@ -1,7 +1,27 @@
 AllCops:
   TargetRubyVersion: 2.2
+
+AllCops:
+  TargetRubyVersion: 2.3.3
   Exclude:
-  UseCache: false
+    - "vendor/**/*"
+    - bin/*
+
+Layout/DotPosition:
+  Description: Checks the position of the dot in multi-line method calls.
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#consistent-multi-line-chains
+  Enabled: true
+  EnforcedStyle: leading
+  SupportedStyles:
+  - leading
+  - trailing
+Layout/EmptyLineAfterMagicComment:
+  Description: 'Add an empty line after magic comments to separate them from code.'
+  StyleGuide: '#separate-magic-comments-from-code'
+  Enabled: true
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - "spec/**/*"
 Style/CollectionMethods:
   Description: Preferred collection methods.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#map-find-select-reduce-size
@@ -12,15 +32,7 @@ Style/CollectionMethods:
     find: detect
     find_all: select
     reduce: inject
-Style/DotPosition:
-  Description: Checks the position of the dot in multi-line method calls.
-  StyleGuide: https://github.com/bbatsov/ruby-style-guide#consistent-multi-line-chains
-  Enabled: true
-  EnforcedStyle: trailing
-  SupportedStyles:
-  - leading
-  - trailing
-Style/FileName:
+Naming/FileName:
   Description: Use snake_case for source file names.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#snake-case-files
   Enabled: false
@@ -34,7 +46,6 @@ Style/IfUnlessModifier:
   Description: Favor modifier if/unless usage when you have a single-line body.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#if-as-a-modifier
   Enabled: false
-  MaxLineLength: 80
 Style/OptionHash:
   Description: Don't use option hashes when you can use keyword arguments.
   Enabled: false
@@ -52,7 +63,7 @@ Style/PercentLiteralDelimiters:
     "%w": "()"
     "%W": "()"
     "%x": "()"
-Style/PredicateName:
+Naming/PredicateName:
   Description: Check the names of predicate methods.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#bool-methods-qmark
   Enabled: true
@@ -75,7 +86,7 @@ Style/RaiseArgs:
 Style/SignalException:
   Description: Checks for proper usage of fail and raise.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#fail-method
-  Enabled: false
+  Enabled: true
   EnforcedStyle: semantic
   SupportedStyles:
   - only_raise
@@ -101,7 +112,7 @@ Style/StringLiterals:
   Description: Checks if uses of quotes match the configured preference.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#consistent-string-literals
   Enabled: true
-  EnforcedStyle: double_quotes
+  EnforcedStyle: single_quotes
   SupportedStyles:
   - single_quotes
   - double_quotes
@@ -116,21 +127,18 @@ Style/StringLiteralsInInterpolation:
 Style/TrailingCommaInArguments:
   Description: 'Checks for trailing comma in argument lists.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#no-trailing-array-commas'
-  Enabled: false
+  Enabled: true
   EnforcedStyleForMultiline: no_comma
-  SupportedStyles:
-  - comma
-  - consistent_comma
-  - no_comma
-Style/TrailingCommaInLiteral:
-  Description: 'Checks for trailing comma in array and hash literals.'
+Style/TrailingCommaInArrayLiteral:
+  Description: 'Checks for trailing comma in array literals.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#no-trailing-array-commas'
-  Enabled: false
+  Enabled: true
   EnforcedStyleForMultiline: no_comma
-  SupportedStyles:
-  - comma
-  - consistent_comma
-  - no_comma
+Style/TrailingCommaInHashLiteral:
+  Description: 'Checks for trailing comma in hash literals.'
+  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#no-trailing-array-commas'
+  Enabled: true
+  EnforcedStyleForMultiline: no_comma
 Metrics/AbcSize:
   Description: A calculated magnitude based on number of assignments, branches, and
     conditions.
@@ -176,7 +184,7 @@ Lint/AssignmentInCondition:
 Style/InlineComment:
   Description: Avoid inline comments.
   Enabled: false
-Style/AccessorMethodName:
+Naming/AccessorMethodName:
   Description: Check the naming of accessor methods for get_/set_.
   Enabled: false
 Style/Alias:
@@ -234,9 +242,120 @@ Lint/HandleExceptions:
   Description: Don't suppress exception.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#dont-hide-exceptions
   Enabled: false
-Lint/LiteralInCondition:
+Lint/LiteralAsCondition:
   Description: Checks of literals used in conditions.
   Enabled: false
 Lint/LiteralInInterpolation:
   Description: Checks for literals used in interpolation.
   Enabled: false
+
+##################### Rails ##################################
+
+Rails/ActionFilter:
+  Description: 'Enforces consistent use of action filter methods.'
+  Enabled: true
+Rails/Date:
+  Description: >-
+                  Checks the correct usage of date aware methods,
+                  such as Date.today, Date.current etc.
+  Enabled: true
+Rails/Delegate:
+  Description: 'Prefer delegate method for delegations.'
+  Enabled: true
+Rails/Exit:
+  Description: >-
+                  Favor `fail`, `break`, `return`, etc. over `exit` in
+                  application or library code outside of Rake files to avoid
+                  exits during unit testing or running in production.
+  Enabled: true
+Rails/FindBy:
+  Description: 'Prefer find_by over where.first.'
+  StyleGuide: 'https://github.com/bbatsov/rails-style-guide#find_by'
+  Enabled: true
+Rails/FindEach:
+  Description: 'Prefer all.find_each over all.find.'
+  StyleGuide: 'https://github.com/bbatsov/rails-style-guide#find-each'
+  Enabled: true
+Rails/HasAndBelongsToMany:
+  Description: 'Prefer has_many :through to has_and_belongs_to_many.'
+  StyleGuide: 'https://github.com/bbatsov/rails-style-guide#has-many-through'
+  Enabled: true
+Rails/HttpPositionalArguments:
+  Description: 'Rails 5 only, disabled to keep Hound quiet'
+  Enabled: false
+Rails/NotNullColumn:
+  Description: 'Do not add a NOT NULL column without a default value'
+  Enabled: false
+Rails/Output:
+  Description: 'Checks for calls to puts, print, etc.'
+  Enabled: true
+Rails/OutputSafety:
+  Description: 'The use of `html_safe` or `raw` may be a security risk.'
+  Enabled: true
+Rails/PluralizationGrammar:
+  Description: 'Checks for incorrect grammar when using methods like `3.day.ago`.'
+  Enabled: true
+Rails/ReadWriteAttribute:
+  Description: >-
+                 Checks for read_attribute(:attr) and
+                 write_attribute(:attr, val).
+  StyleGuide: 'https://github.com/bbatsov/rails-style-guide#read-attribute'
+  Enabled: true
+Rails/RequestReferer:
+  Description: 'Use consistent syntax for request.referer.'
+  Enabled: true
+Rails/SafeNavigation:
+  Description: "Use Ruby's safe navigation operator (`&.`) instead of `try!`"
+  Enabled: true
+Rails/ScopeArgs:
+  Description: 'Checks the arguments of ActiveRecord scopes.'
+  Enabled: true
+Rails/TimeZone:
+  Description: 'Checks the correct usage of time zone aware methods.'
+  StyleGuide: 'https://github.com/bbatsov/rails-style-guide#time'
+  Reference: 'http://danilenko.org/2012/7/6/rails_timezones'
+  Enabled: true
+Rails/UniqBeforePluck:
+  Description: 'Prefer the use of uniq or distinct before pluck.'
+  Enabled: true
+Rails/Validation:
+  Description: 'Use validates :attribute, hash of validations.'
+  Enabled: true
+Security/JSONLoad:
+  Description : 'Prefer usage of JSON.parse'
+  Enabled: true
+
+Layout/DotPosition:
+  Description: Checks the position of the dot in multi-line method calls.
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#consistent-multi-line-chains
+  Enabled: true
+  EnforcedStyle: leading
+  SupportedStyles:
+  - leading
+  - trailing
+Metrics/BlockLength:
+  Enabled: false
+Style/AndOr:
+  Description: Use &&/|| instead of and/or.
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#no-and-or-or
+  Enabled: true
+  EnforcedStyle: conditionals
+  SupportedStyles:
+  - always
+  - conditionals
+Style/ClassAndModuleChildren:
+  Enabled: true
+  EnforcedStyle: nested
+  SupportedStyles:
+  - compact
+  - nested
+Style/MultilineIfModifier:
+  Enabled: false
+Style/StringLiterals:
+  Description: Checks if uses of quotes match the configured preference.
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#consistent-string-literals
+  Enabled: true
+  EnforcedStyle: single_quotes
+  SupportedStyles:
+  - single_quotes
+  - double_quotes

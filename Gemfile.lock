@@ -1,0 +1,105 @@
+PATH
+  remote: .
+  specs:
+    gman_client (0.3.1)
+      blanket_wrapper (= 3.0.2)
+      hashie (= 3.4.3)
+      rest-client (= 1.8.0)
+      retries (= 0.0.5)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.5.2)
+      public_suffix (>= 2.0.2, < 4.0)
+    ast (2.4.0)
+    blanket_wrapper (3.0.2)
+      httparty
+      recursive-open-struct
+    codeclimate-test-reporter (1.0.8)
+      simplecov (<= 0.13)
+    crack (0.4.3)
+      safe_yaml (~> 1.0.0)
+    diff-lcs (1.3)
+    docile (1.1.5)
+    domain_name (0.5.20180417)
+      unf (>= 0.0.5, < 1.0.0)
+    hashdiff (0.3.7)
+    hashie (3.4.3)
+    http-cookie (1.0.3)
+      domain_name (~> 0.5)
+    httparty (0.16.2)
+      multi_xml (>= 0.5.2)
+    json (2.1.0)
+    mime-types (2.99.3)
+    multi_xml (0.6.0)
+    netrc (0.11.0)
+    parallel (1.12.1)
+    parser (2.5.1.2)
+      ast (~> 2.4.0)
+    powerpack (0.1.2)
+    public_suffix (3.0.2)
+    rainbow (3.0.0)
+    rake (10.5.0)
+    recursive-open-struct (1.1.0)
+    rest-client (1.8.0)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
+    retries (0.0.5)
+    rspec (3.4.0)
+      rspec-core (~> 3.4.0)
+      rspec-expectations (~> 3.4.0)
+      rspec-mocks (~> 3.4.0)
+    rspec-core (3.4.4)
+      rspec-support (~> 3.4.0)
+    rspec-expectations (3.4.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.4.0)
+    rspec-its (1.2.0)
+      rspec-core (>= 3.0.0)
+      rspec-expectations (>= 3.0.0)
+    rspec-mocks (3.4.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.4.0)
+    rspec-support (3.4.1)
+    rubocop (0.54.0)
+      parallel (~> 1.10)
+      parser (>= 2.5)
+      powerpack (~> 0.1)
+      rainbow (>= 2.2.2, < 4.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (~> 1.0, >= 1.0.1)
+    ruby-progressbar (1.9.0)
+    safe_yaml (1.0.4)
+    simplecov (0.13.0)
+      docile (~> 1.1.0)
+      json (>= 1.8, < 3)
+      simplecov-html (~> 0.10.0)
+    simplecov-html (0.10.2)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.5)
+    unicode-display_width (1.4.0)
+    vcr (3.0.1)
+    webmock (1.22.6)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
+      hashdiff
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler (~> 1.7)
+  codeclimate-test-reporter
+  gman_client!
+  rake (~> 10.0)
+  rspec (= 3.4.0)
+  rspec-its (= 1.2.0)
+  rubocop (= 0.54.0)
+  vcr (= 3.0.1)
+  webmock (= 1.22.6)
+
+BUNDLED WITH
+   1.16.3
