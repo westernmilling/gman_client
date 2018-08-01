@@ -1,9 +1,14 @@
+# frozen_string_literal: true
+
 require 'rspec/its'
 require 'spec_helper'
 require 'gman_client'
 require 'httparty'
 require 'securerandom'
+require 'simplecov'
 require 'webmock/rspec'
+
+SimpleCov.start
 
 Dir[File.join(GmanClient.root, 'spec/support/**/*.rb')].each { |f| require f }
 

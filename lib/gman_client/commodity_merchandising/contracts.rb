@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module GmanClient
   module CommodityMerchandising
     module Contracts
@@ -17,13 +19,13 @@ module GmanClient
 
       def clean_filters(filters)
         keep = filters.select do |k, _v|
-          [
-            :commodity_id_eq,
-            :contract_type_eq,
-            :customer_id_eq,
-            :inv_contract_id_eq,
-            :location_id_eq
-          ].include?(k)
+          %i(
+            commodity_id_eq
+            contract_type_eq
+            customer_id_eq
+            inv_contract_id_eq
+            location_id_eq
+          ).include?(k)
         end
 
         Hash[filters.to_a & keep.to_a]

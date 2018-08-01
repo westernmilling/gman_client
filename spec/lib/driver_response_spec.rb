@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 RSpec.describe Gman::Client do
@@ -23,12 +25,12 @@ RSpec.describe Gman::Client do
     describe 'first driver' do
       subject { client_response.first }
       its(:keys) do
-        is_expected.to eq([:driver_id,
-                           :active_fg,
-                           :driver_type,
-                           :sub_hauler_fg,
-                           :first_name,
-                           :last_name])
+        is_expected.to eq(%i(driver_id
+                             active_fg
+                             driver_type
+                             sub_hauler_fg
+                             first_name
+                             last_name))
       end
     end
   end

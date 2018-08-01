@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'gman_client/api/customer_contracts'
 require 'gman_client/api/pick_up_orders'
 require 'gman_client/api/orders'
