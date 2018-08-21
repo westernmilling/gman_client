@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    gman_client (0.3.1)
+    gman_client (0.4.0)
       blanket_wrapper (= 3.0.2)
       hashie (= 3.4.3)
       rest-client (= 1.8.0)
