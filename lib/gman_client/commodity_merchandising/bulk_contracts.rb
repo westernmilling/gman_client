@@ -13,8 +13,7 @@ module GmanClient
             .get(params: { customer_ids: customer_ids.join(',') })
         end
 
-        puts response.inspect
-        JSON.parse(response)
+        response.map(&:to_h)
       end
     end
   end
