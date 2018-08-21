@@ -7,6 +7,7 @@ module Gman
     include GmanClient::Api::PickUpOrders
     include GmanClient::Api::HealthCheck
     include GmanClient::CommodityMerchandising::Contracts
+    include GmanClient::CommodityMerchandising::BulkContracts
     include GmanClient::Utility
 
     attr_accessor :url, :client_id, :client_secret
