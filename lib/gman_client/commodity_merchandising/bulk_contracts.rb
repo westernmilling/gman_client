@@ -3,14 +3,14 @@
 module GmanClient
   module CommodityMerchandising
     module BulkContracts
-      def bulk_contracts(customer_ids)
+      def bulk_contracts
         response = attempt(@retry_attempts) do
           request
             .api
             .v1
             .commodity_merchandising
             .bulk_contracts
-            .get(params: { customer_ids: customer_ids.join(',') })
+            .get
         end
 
         response.map(&:to_h)
